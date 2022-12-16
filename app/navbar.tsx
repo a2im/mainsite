@@ -10,30 +10,23 @@ export default function MyNavbar() {
   useOnClickOutside(ref, () => setNavbar(false));
   return (
     <div>
-      <nav className="bggradient w-full fixed z-50 shadow-2xl">
-        <div className="justify-between max-w-6xl mx-auto items-center md:flex">
+      <nav className="bggradient w-full fixed z-50 shadow-2xl px-5">
+        <div className="max-w-5xl justify-between mx-auto items-center md:flex">
           <div>
             <div className="flex items-center justify-between md:block">
-              <Link href={"/"} legacyBehavior>
-              <a>
+              <Link href={"/"}>
               <div className="flex justify-center gap-10 grid-cols-2">
-              <div className="a2imbuttonbox ml-2 w-10">
+              <div className="relative a2imbuttonbox ml-2 w-10">
                 <Image
                   src="/logos/A2IM-logos/A2IM-button-white.png"
                   alt="a2im logo button"
-                  width={100}
-                  height={100}
-                  sizes="100vw"
-                  style={{
-                    width: "100%",
-                    height: "auto"
-                  }} />
+                  fill={true}
+                  sizes="100vw" />
                 </div>
                 <div className="mt-1">
-                <h2 className="text-3xl text-white font-bold tracking-normal">A2IM</h2>
+                <h2 className="text-2xl text-white font-bold tracking-normal">A2IM</h2>
                 </div>
               </div>
-              </a>
               </Link>
               <div className="md:hidden">
                 <button
@@ -79,39 +72,39 @@ export default function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul ref={ref} className="md:flex md:space-x-3">
+              <ul ref={ref} className="md:flex ">
                 <li 
-                  className="text-center">
-                  <Link href="/about-us" onClick={() => setNavbar(false)} className="text-2xl uppercase">
+                  className="text-center text-white text-xl uppercase">
+                  <Link href="/about-us" onClick={() => setNavbar(false)}>
                   ABOUT
                   </Link>
                 </li>
-                <li className="text-center">
-                  <Link href="/about-us/join-a2im" onClick={() => setNavbar(false)} className="text-2xl uppercase">
+                <li className="text-center text-white text-xl uppercase">
+                  <Link href="/about-us/join-a2im" onClick={() => setNavbar(false)}>
                     JOIN
                   </Link>
                 </li>
                 <li 
-                  className="text-center">
-                  <Link href="/initiatives" onClick={() => setNavbar(false)} className="text-2xl uppercase">
+                  className="text-center text-white text-xl uppercase">
+                  <Link href="/initiatives" onClick={() => setNavbar(false)}>
                     INITIATIVES
                   </Link>
                 </li>
                 <li 
-                  className="text-center">
-                  <Link href="/news" onClick={() => setNavbar(false)} className="text-2xl uppercase">
+                  className="text-center text-white text-xl uppercase">
+                  <Link href="/news" onClick={() => setNavbar(false)} >
                     NEWS
                   </Link>
                 </li>
                 <li 
-                  className="text-center">
-                  <Link href="/events" onClick={() => setNavbar(false)} className="text-2xl uppercase">
+                  className="text-center text-white text-xl uppercase">
+                  <Link href="/events" onClick={() => setNavbar(false)}>
                     EVENTS
                   </Link>
                 </li>
                 <li 
-                  className="text-center">
-                  <Link href="/" onClick={() => setNavbar(false)} className="text-2xl uppercase">
+                  className="text-center text-white text-xl uppercase">
+                  <Link href="/" onClick={() => setNavbar(false)}>
                     LOG IN
                   </Link>
                 </li>

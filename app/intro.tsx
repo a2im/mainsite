@@ -45,9 +45,9 @@ export function Intro3() {
     <div className="pb-20 max-w-5xl mx-auto">
 <div className="pt-10 gap-10 p-8 md:mt-20">
       <div className="px-8 md:px-20 justify-center mx-auto center-content">
-<h2 className="mb-9 md:mt-10 font-bold leading-tight">
+<h2 className="mb-9 md:mt-10 font-bold leading-tight drop-shadow-2xl">
 Join us in New York City & Online</h2>
-  <h4 className="max-w-xl">Historically held in New York City, the Libera Awards went virtual in 2020 in response to the pandemic. Moving forward with a hybrid format, we return to our in-person ceremony in NYC, and virtual ceremony
+  <h4 className="max-w-xl drop-shadow-2xl">Historically held in New York City, the Libera Awards went virtual in 2020 in response to the pandemic. Moving forward with a hybrid format, we return to our in-person ceremony in NYC, and virtual ceremony
 exclusively on YouTube.</h4>
         </div>
   </div>

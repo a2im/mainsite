@@ -14,23 +14,28 @@ export function PostsList() {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
     return (
-      <div className="bg-sky-50 mb-20">
-      <div className="relative flex flex-col mx-auto max-w-3xl p-10 gap-10 z-0">
+      <div className="mb-20">
+      <div className="relative grid grid-cols-0 md:grid-cols-4 mx-auto p-10 gap-10 z-0 max-w-6xl">
        {/* Map through the data */}
        {data.posts.data.map(posts => (
-                <div key={posts.id} className="mx-auto Borderswap5 p-10 hover:scale-105 shadow-2xl">
-                  <div className="relative LiberaBorder2 bg-white mx-auto p-5 h-[300] overflow-hidden">
+                <div key={posts.id} className="mx-auto p-2 hover:scale-105 shadow-2xl w-64 max-h-96">
+                  <div className="relative LiberaBorder2 bg-white mx-auto h-[100] overflow-hidden">
                   <Image 
                     src={posts.attributes.coverImage.data.attributes.url}
                     fill
                     style={{objectFit: "cover"}}
                     alt={posts.attributes.coverImage.data.attributes.alternativeText} 
-                    className="mx-auto"
+                    className="mx-auto object-center"
                     />
                     </div>
-                    <div className="p-10">
-                    <Link href={`/news/${posts.attributes.Slug}`} onClick={() => router.push(`/news/${posts.attributes.Slug}`)}><h3>{posts.attributes?.Title}</h3></Link>
-                    <p>
+                    <div className="">
+                      <div className="max-h-[140px]">
+                    <Link href={`/news/${posts.attributes.Slug}`} 
+                    onClick={() => router.push(`/news/${posts.attributes.Slug}`)}>
+                      <h3 className="text-lg text-ellipsis overflow-hidden ...">{posts.attributes?.Title}</h3>
+                    </Link>
+                    </div>
+                    <p className="text-ellipsis overflow-hidden ...">
                     {posts.attributes?.Excerpt}
                     </p>
                     </div>

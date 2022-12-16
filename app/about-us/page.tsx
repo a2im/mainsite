@@ -1,16 +1,16 @@
-import AboutUS from './about-us'
+import AboutUS from '../about-us'
+import Board from '../board'
+import Staff from '../staff'
 import Footer from '../footer'
+
 
 export default function About() {
   return (
-    <div>
+    <div className="mx-auto justify-center">
           <title>A2IM - About Us</title>
-          <div className="grow shrink content-center">
-<h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
-  About
-  </h2>
-  </div>
           <AboutUS/>
+          <Board/>
+          <Staff/>
           <Footer />
     </div>
   )

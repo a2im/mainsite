@@ -60,7 +60,7 @@ return(
                     height={ads.attributes.Asset.data.attributes.height} 
                     width={ads.attributes.Asset.data.attributes.width} 
                     alt={ads.attributes.Asset.data.attributes.alternativeText} 
-                    className="mx-auto"
+                    className="mx-auto shadow-2xl"
                     />
                     </Link>
                 </div>

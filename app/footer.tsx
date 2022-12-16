@@ -12,7 +12,7 @@ export default function Footer() {
       <AdBanner/>
         <div className="liberaFooter py-10 max-w-4xl grid grid-cols-1 md:grid-cols-2 mx-auto justify-center md:gap-9 px-10">
             <Link href="https://liberaawards.com">
-              <Image src="/logos/A2IM-logo-white.png" alt='a2im logo' height={458} width={1024} priority={true}/>
+              <Image src="/logos/A2IM-logos/A2IM-logo-white.png" className="drop-shadow-2xl" alt='a2im logo' height={458} width={1024} priority={true}/>
             </Link>
             <SocialFollowWhite/>
         </div>
