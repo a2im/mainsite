@@ -9,7 +9,8 @@ export function PostsList() {
   const router = useRouter()
   const { loading, error, data } = useQuery(GET_ALL_POSTS, { 
     variables: {
-      PublicationState: "LIVE"
+      PublicationState: "LIVE",
+      Name: "Mainsite"
     }});
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
@@ -30,8 +31,8 @@ export function PostsList() {
                     </div>
                     <div className="">
                       <div className="max-h-[140px]">
-                    <Link href={`/news/${posts.attributes.Slug}`} 
-                    onClick={() => router.push(`/news/${posts.attributes.Slug}`)}>
+                    <Link href={`/news/${posts.attributes.slug}`} 
+                    onClick={() => router.push(`/news/${posts.attributes.slug}`)}>
                       <h3 className="text-lg text-ellipsis overflow-hidden ...">{posts.attributes?.Title}</h3>
                     </Link>
                     </div>

@@ -1197,7 +1197,7 @@ export type Post = {
   Body?: Maybe<Scalars['String']>;
   Date?: Maybe<Scalars['DateTime']>;
   Excerpt?: Maybe<Scalars['String']>;
-  Slug?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
   Title?: Maybe<Scalars['String']>;
   app?: Maybe<AppEntityResponse>;
   coverImage?: Maybe<UploadFileEntityResponse>;
@@ -1245,7 +1245,7 @@ export type PostFiltersInput = {
   Body?: InputMaybe<StringFilterInput>;
   Date?: InputMaybe<DateTimeFilterInput>;
   Excerpt?: InputMaybe<StringFilterInput>;
-  Slug?: InputMaybe<StringFilterInput>;
+  slug?: InputMaybe<StringFilterInput>;
   Title?: InputMaybe<StringFilterInput>;
   and?: InputMaybe<Array<InputMaybe<PostFiltersInput>>>;
   app?: InputMaybe<AppFiltersInput>;
@@ -1263,7 +1263,7 @@ export type PostInput = {
   Body?: InputMaybe<Scalars['String']>;
   Date?: InputMaybe<Scalars['DateTime']>;
   Excerpt?: InputMaybe<Scalars['String']>;
-  Slug?: InputMaybe<Scalars['String']>;
+  slug?: InputMaybe<Scalars['String']>;
   Title?: InputMaybe<Scalars['String']>;
   app?: InputMaybe<Scalars['ID']>;
   coverImage?: InputMaybe<Scalars['ID']>;

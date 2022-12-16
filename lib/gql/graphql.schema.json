@@ -9305,7 +9305,7 @@
             "deprecationReason": null
           },
           {
-            "name": "Slug",
+            "name": "slug",
             "description": null,
             "args": [],
             "type": {
@@ -9676,7 +9676,7 @@
             "deprecationReason": null
           },
           {
-            "name": "Slug",
+            "name": "slug",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -9875,7 +9875,7 @@
             "deprecationReason": null
           },
           {
-            "name": "Slug",
+            "name": "slug",
             "description": null,
             "type": {
               "kind": "SCALAR",

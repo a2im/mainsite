@@ -1137,7 +1137,7 @@ export type PostFiltersInput = {
   Title?: InputMaybe<StringFilterInput>;
   Date?: InputMaybe<DateTimeFilterInput>;
   Excerpt?: InputMaybe<StringFilterInput>;
-  Slug?: InputMaybe<StringFilterInput>;
+  slug?: InputMaybe<StringFilterInput>;
   Body?: InputMaybe<StringFilterInput>;
   app?: InputMaybe<AppFiltersInput>;
   news_categories?: InputMaybe<NewsCategoryFiltersInput>;
@@ -1155,7 +1155,7 @@ export type PostInput = {
   coverImage?: InputMaybe<Scalars['ID']>;
   Date?: InputMaybe<Scalars['DateTime']>;
   Excerpt?: InputMaybe<Scalars['String']>;
-  Slug?: InputMaybe<Scalars['String']>;
+  slug?: InputMaybe<Scalars['String']>;
   Body?: InputMaybe<Scalars['String']>;
   app?: InputMaybe<Scalars['ID']>;
   news_categories?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
@@ -1169,7 +1169,7 @@ export type Post = {
   coverImage?: Maybe<UploadFileEntityResponse>;
   Date?: Maybe<Scalars['DateTime']>;
   Excerpt?: Maybe<Scalars['String']>;
-  Slug?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
   Body?: Maybe<Scalars['String']>;
   app?: Maybe<AppEntityResponse>;
   news_categories?: Maybe<NewsCategoryRelationResponseCollection>;

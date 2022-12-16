@@ -9,7 +9,7 @@ export default async function MyPost({params,}: { params: {
   slug : String,
  }}) {
 
-const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[Slug][$eq]=${params.slug}`);
+const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${params.slug}`);
 const posts: PostRelationResponseCollection = await res.json()
 
   return <div className="pt-16 bg-stone-50 pb-20">
@@ -22,7 +22,7 @@ const posts: PostRelationResponseCollection = await res.json()
   {posts?.data.map(posts => (
             <div key={posts.id} className="mx-auto p-20 LiberaBorder2 bg-white text-black">
              <div className="flex flex-row justify-content-evenly">
-              <Link href={`/news/${posts?.attributes?.Slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
+              <Link href={`/news/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
               <div className="relative w-1/2">
               <Image 
                 src={posts.attributes?.coverImage?.data?.attributes?.url}
@@ -48,7 +48,7 @@ export async function generateStaticParams() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate=*`);
   const data: PostEntityResponseCollection = await res.json();
   return data?.data?.map((data) => ({
-    slug: data.attributes.Slug,
+    slug: data.attributes.slug,
     id: data.id,
     Title: data.attributes.Title,
     url: data.attributes.coverImage.data.attributes.url,

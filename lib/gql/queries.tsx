@@ -50,8 +50,8 @@ query getLiberaAds($isActive: Boolean, $Name: String!) {
 `;
 
 export const GET_ALL_POSTS = gql`
-query AllPosts($PublicationState: PublicationState){
-  posts(publicationState: $PublicationState, sort: "id:DESC"){
+query AllPosts($PublicationState: PublicationState, $Name: String! ){
+  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, sort: "id:DESC"){
     data {
       id
       attributes {
@@ -68,7 +68,7 @@ query AllPosts($PublicationState: PublicationState){
           }
         }
         Date
-        Slug
+        slug
         Body
         Excerpt
       }
@@ -79,7 +79,7 @@ query AllPosts($PublicationState: PublicationState){
 
 export const GET_MY_POST = gql`
 query MyPostBySlug($slug: String!) {
-  posts(filters: { Slug: { eq: $slug }}) {
+  posts(filters: { slug: { eq: $slug }}) {
     data {
       id
       attributes {
@@ -96,7 +96,7 @@ query MyPostBySlug($slug: String!) {
           }
         }
         Excerpt
-        Slug
+        slug
         Body
       }
     }
@@ -108,7 +108,7 @@ export const GET_POST_AND_MOREPOSTS = gql`
 fragment PostFields on Post {
   Title
   Excerpt
-  Slug
+  slug
   Date
   coverImage {
     data {
@@ -142,7 +142,7 @@ fragment PostFields on Post {
   }
 }
 query PostBySlug($slug: String!) {
-  posts(filters: { Slug: { eq: $slug }}) {
+  posts(filters: { slug: { eq: $slug }}) {
     data {
       id
       attributes {
@@ -162,7 +162,7 @@ query RecentNews ($PublicationState: PublicationState){
       attributes {
         Title
         Excerpt
-        Slug
+        slug
       }
     }
   }
