@@ -11,7 +11,7 @@ export default function Footer() {
     <div className="bg-stone-900 md:py-10 z-1">
       <AdBanner/>
         <div className="liberaFooter py-10 max-w-4xl grid grid-cols-1 md:grid-cols-2 mx-auto justify-center md:gap-9 px-10">
-            <Link href="https://liberaawards.com">
+            <Link href="/" className="hover:scale-105">
               <Image src="/logos/A2IM-logos/A2IM-logo-white.png" className="drop-shadow-2xl" alt='a2im logo' height={458} width={1024} priority={true}/>
             </Link>
             <SocialFollowWhite/>

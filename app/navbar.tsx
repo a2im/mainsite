@@ -21,10 +21,11 @@ export default function MyNavbar() {
                   src="/logos/A2IM-logos/A2IM-button-white.png"
                   alt="a2im logo button"
                   fill={true}
-                  sizes="100vw" />
+                  sizes="100vw"
+                  className="hover:scale-105" />
                 </div>
                 <div className="mt-1">
-                <h2 className="text-2xl text-white font-bold tracking-normal">A2IM</h2>
+                <h2 className="text-2xl text-white font-bold tracking-normal hover:scale-105">A2IM</h2>
                 </div>
               </div>
               </Link>
@@ -74,36 +75,36 @@ export default function MyNavbar() {
             >
               <ul ref={ref} className="md:flex ">
                 <li 
-                  className="text-center text-white text-xl uppercase">
+                  className="text-center text-white text-l uppercase px-2 hover:scale-105">
                   <Link href="/about-us" onClick={() => setNavbar(false)}>
                   ABOUT
                   </Link>
                 </li>
-                <li className="text-center text-white text-xl uppercase">
+                <li className="text-center text-white text-l uppercase px-2 hover:scale-105">
                   <Link href="/about-us/join-a2im" onClick={() => setNavbar(false)}>
                     JOIN
                   </Link>
                 </li>
                 <li 
-                  className="text-center text-white text-xl uppercase">
+                  className="text-center text-white text-l uppercase px-2 hover:scale-105">
                   <Link href="/initiatives" onClick={() => setNavbar(false)}>
                     INITIATIVES
                   </Link>
                 </li>
                 <li 
-                  className="text-center text-white text-xl uppercase">
+                  className="text-center text-white text-l uppercase px-2 hover:scale-105">
                   <Link href="/news" onClick={() => setNavbar(false)} >
                     NEWS
                   </Link>
                 </li>
                 <li 
-                  className="text-center text-white text-xl uppercase">
+                  className="text-center text-white text-l uppercase px-2 hover:scale-105">
                   <Link href="/events" onClick={() => setNavbar(false)}>
                     EVENTS
                   </Link>
                 </li>
                 <li 
-                  className="text-center text-white text-xl uppercase">
+                  className="text-center text-white text-l uppercase px-2 hover:scale-105">
                   <Link href="/" onClick={() => setNavbar(false)}>
                     LOG IN
                   </Link>

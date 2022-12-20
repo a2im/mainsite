@@ -1,16 +1,16 @@
 import Footer from '../../footer'
-import MyTickets from './tickets'
+import JoinUS from '../../join-us'
 
-export default function Tickets() {
+export default function JoinA2IM() {
   return (
     <div>
           <title>A2IM - Join Us</title>
-          <div className="grow shrink content-center">
-<h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
-Join Us
-  </h2>
+          <div className="grow shrink content-center bg-stone-900 text-white py-10">
+<h3 className="pt-10 grow font-bold align-middle text-center leading-tight max-w-5xl mx-auto">
+OUR METEORIC MARKET-SHARE GROWTH IS A TRUE TESTAMENT TO THE INDEPENDENT SPIRIT.
+  </h3>
   </div>
-<MyTickets/>
+<JoinUS/>
           <Footer/>
     </div>
   )

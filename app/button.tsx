@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export function ButtonExternal ({ children, href }) {
-  return <div className="text-center p-8">
+  return <div className="mx-auto text-center p-8">
         <Link
           href={href}
           target="_blank"

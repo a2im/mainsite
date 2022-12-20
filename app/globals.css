@@ -56,16 +56,17 @@
   border-bottom-right-radius: 25px;
  } 
 
+ .iwbuttonsolid {
+  border-radius: 30px;
+  background-color: #fafaf9;
+  color: #1c1917;
+  font-size: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-transform: uppercase;
+}
 /* Write your own custom base styles here */
 .accordion {
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-top-color: transparent;
   padding: 20px;
   border: 1px solid transparent;
 }
@@ -75,16 +76,13 @@
 }
 
 .accordion__button {
-  background-color: rgba(255, 251, 235, 0.8);
-  color: #fafaf9;
+  background: #fafaf9;
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  animation: gradient 3s ease infinite;
 }
 
 .accordion__button:hover {
@@ -114,6 +112,8 @@
 .accordion__panel {
   padding: 20px;
   animation: fadein 0.35s ease-in;
+  background-color: #fafaf9;
+  color: black;
 }
 
 /* -------------------------------------------------- */
@@ -162,21 +162,6 @@
   p {
       font-family: Manrope;
     }
-  li {
-      color: #1c1917;
-      font-size: 1.0rem;
-      margin: auto;
-      border: 2px solid transparent;
-      border-radius: 50px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  li:hover {
-    border: 2px solid #1c1917;
-    border-radius: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   html::-webkit-scrollbar {
     display: none;
   }
