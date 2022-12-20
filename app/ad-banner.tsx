@@ -30,7 +30,7 @@ export default function AdBanner(){
   const { loading, error, data } = useQuery(GET_ALL_ADS, { 
     variables: {
       isActive: true,
-      Name: "Libera Awards"
+      Name: "Mainsite"
     }});
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
