@@ -27,9 +27,9 @@ export default function RootLayout({
           <MyNavbar/>
           <main className="mx-auto">
             {children}
-          </main>
-          <MyModal />
+          </main>          
           <Footer/>
+          <MyModal/>
         </Providers>
       </body>
     </html>

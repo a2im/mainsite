@@ -64,11 +64,10 @@ In response to COVID-19, we took Indie Week online in 2020 and 2021. We returned
                 </AnimatePresence> ) : (
                 <motion.button 
                 whileTap={{scale: 0.95}}
-                className="save-button"
+                className="hover:scale-105 z-99"
                 onClick={() => (setModalOpen(true))}>
                 <Image
-                className="shadow-2xl"
-                src="/logos/A2IM-logos/A2IM-button-white.png"
+                src="/logos/A2IM-logos/A2IM-modal-button-white.png"
                 alt="a2im button"
                 width={75}
                 height={75}
