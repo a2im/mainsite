@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image";
 import MemberBenefits from "./member-benefits";
 import { ButtonInternal, ButtonExternal } from "./button";
-import { PolicyStatement, JoinButtonSegment, LargeJoinButtonSegment  } from "./segments";
+import { PolicyStatement, JoinButtonSegment, LargeJoinButtonSegmentDark  } from "./segments";
 
 function Join1 () {
     return (
@@ -87,7 +87,7 @@ export default function JoinUS (){
     <Join1/>
     <JoinButtonSegment/>
     <BenefitList/>
-    <LargeJoinButtonSegment/>
+    <LargeJoinButtonSegmentDark/>
     <Join3/>
     </>
   )

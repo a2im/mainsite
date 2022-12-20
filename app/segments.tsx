@@ -11,9 +11,22 @@ export function JoinButtonSegment () {
         </div>
 )}
 
-export function LargeJoinButtonSegment () {
+export function LargeJoinButtonSegmentDark () {
     return (
         <div className="py-10 bg-stone-900 text-white mx-auto">
+        <div className="max-w-4xl mx-auto">
+            <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
+        <div className="flex mx-auto justify-center">
+        <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
+        <ButtonInternal href='/community'>COMMUNITY</ButtonInternal>
+        </div>
+        </div>
+        </div>
+)}
+
+export function LargeJoinButtonSegmentLight () {
+    return (
+        <div className="py-10 bg-stone-50 text-black mx-auto">
         <div className="max-w-4xl mx-auto">
             <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
         <div className="flex mx-auto justify-center">
