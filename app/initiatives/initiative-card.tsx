@@ -6,7 +6,7 @@ export default function InitiativeCard(){
     <div className="max-w-6xl mx-auto text-center pb-10 pt-5">
           <hr className="border-a2imred my-5"></hr>
           <Link href="initiatives/mentor-program">
-        <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 px-10">
+        <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
               <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>
@@ -26,7 +26,7 @@ export default function InitiativeCard(){
         </Link>
           <hr className="border-a2imred my-5"></hr>
           <Link href="initiatives/indiescussion">
-          <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 px-10">
+          <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
               <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>
@@ -46,7 +46,7 @@ export default function InitiativeCard(){
         </Link>
         <hr className="border-a2imred my-5"></hr>
         <Link href="https://a2imartist.xyz">
-        <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10  justify-between hover:scale-105 px-10">
+        <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10  justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
               <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>
@@ -64,7 +64,7 @@ export default function InitiativeCard(){
         </div>
         </Link>
         <hr className="border-a2imred my-5"></hr>
-        <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 px-10">
+        <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
               <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>

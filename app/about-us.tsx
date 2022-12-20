@@ -18,7 +18,7 @@ function About1 () {
                    in the marketplace, in the media, on Capitol Hill, and as part of the 
                    global music community.
                 </h4>
-              <ButtonInternal href='/tickets'>LEARN MORE</ButtonInternal>
+              <ButtonInternal href='/about-us/join-a2im'>JOIN NOW</ButtonInternal>
               </div>
               <div className="flex-initial w-1/2 m-10 max-w-xl">
                 <Image
@@ -54,7 +54,7 @@ function About2 () {
                   new age, pop, R&B, reggae, roots, soca/caribbean, traditional American, 
                   world, and more. 
                 </h4>
-                <ButtonInternal href='/tickets'>LEARN MORE</ButtonInternal>
+                <ButtonInternal href='/about-us/join-a2im'>JOIN NOW</ButtonInternal>
               </div>
               <div className="flex-initial w-1/2 m-10 max-w-xl">
                 <Image
@@ -105,7 +105,7 @@ function About3 () {
               </li>
             </ul>
             
-<ButtonInternal href='/tickets'>PAST PROGRAMMING</ButtonInternal>
+<ButtonInternal href='/community'>COMMUNITY</ButtonInternal>
           </div>
         </div>
       </div>

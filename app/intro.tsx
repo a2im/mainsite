@@ -34,7 +34,7 @@ Celebrate the Independent Community</h2>
 
   </div>
   <div className="justify-center bg-stone-900 mx-auto">
-        <ButtonInternal href="/about">LEARN MORE</ButtonInternal>
+        <ButtonInternal href="/about-us">LEARN MORE</ButtonInternal>
         </div>
   </div>
   )
@@ -51,7 +51,7 @@ Join us in New York City & Online</h2>
 exclusively on YouTube.</h4>
         </div>
   </div>
-  <ButtonInternal href="/tickets">GET TICKETS</ButtonInternal>
+  <ButtonInternal href="/events">GET TICKETS</ButtonInternal>
   </div>
   )
 }
