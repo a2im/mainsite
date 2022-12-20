@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { PostRelationResponseCollection, PostEntityResponseCollection } from "../../../lib/gql/types";
 import Footer from '../../footer'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,13 +23,16 @@ const posts: PostRelationResponseCollection = await res.json()
             <div key={posts.id} className="mx-auto p-20 LiberaBorder2 bg-white text-black">
              <div className="flex flex-row justify-content-evenly">
               <Link href={`/news/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
-              <div className="relative w-1/2">
+              <div className="relative w-[300px] h-[250px]">
               <Image 
                 src={posts.attributes?.coverImage?.data?.attributes?.url}
-                layout="fill"
-                objectFit="contain"
+                fill
                 alt={posts.attributes?.coverImage?.data?.attributes?.alternativeText}
                 className="mx-auto hover:scale-105"
+                style={{objectFit:"contain"}}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
                 /> 
                 </div>
                 

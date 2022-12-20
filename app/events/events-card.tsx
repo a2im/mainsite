@@ -9,7 +9,14 @@ export default function EventsCard(){
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
           <div className="relative my-auto w-[500px] h-32">
-              <Image src="/logos/Event-logos/calendar.png" fill alt="main calendar image" style={{objectFit:"contain"}}/>
+              <Image src="/logos/Event-logos/calendar.png" 
+              fill 
+              alt="main calendar image" 
+              style={{objectFit:"contain"}} 
+              sizes="(max-width: 768px) 100vw,
+                     (max-width: 1200px) 50vw,
+                     33vw"
+              />
             </div>
           </div>
           <div className="my-auto max-w-xl">
@@ -24,7 +31,11 @@ export default function EventsCard(){
           <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative my-auto w-[500px] h-32">
-              <Image src="/logos/Event-logos/iw23_Black_Horizontal_Logo_white.png" fill alt="Indie Week logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/Event-logos/iw23_Black_Horizontal_Logo_white.png" fill alt="Indie Week logo" 
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
             </div>
           </div>
           <div className="my-auto max-w-xl">
@@ -44,7 +55,11 @@ export default function EventsCard(){
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10  justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
           <div className="relative my-auto w-[500px] h-32">
-              <Image src="/logos/Event-logos/libera-dancinglady-left-white-logo.png" fill alt="Libera Awards logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/Event-logos/libera-dancinglady-left-white-logo.png" fill alt="Libera Awards logo" 
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
             </div>
           </div>
           <div className="my-auto max-w-xl">
@@ -61,7 +76,11 @@ export default function EventsCard(){
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
           <div className="relative my-auto w-[500px] h-32">
-              <Image src="/logos/Event-logos/panam.png" fill alt="Pan-am logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/Event-logos/panam.png" fill alt="Pan-am logo" 
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
             </div>
           </div>
           <div className="my-auto max-w-xl">
@@ -76,7 +95,11 @@ export default function EventsCard(){
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
           <div className="relative my-auto w-[500px] h-32">
-              <Image src="/logos/Event-logos/A2IM-Lets-Get-Digital.png" fill alt="let's get digital logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/Event-logos/A2IM-Lets-Get-Digital.png" fill alt="let's get digital logo"
+               style={{objectFit:"contain"}}
+               sizes="(max-width: 768px) 100vw,
+               (max-width: 1200px) 50vw,
+               33vw"/>
             </div>
           </div>
           <div className="my-auto max-w-xl">

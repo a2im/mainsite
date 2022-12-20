@@ -9,7 +9,11 @@ export default function InitiativeCard(){
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
-              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" 
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
             </div>
             <div className="relative my-auto max-w-[400px]">
               <h2 className="text-left text-4xl">Mentorship Program</h2>
@@ -29,7 +33,11 @@ export default function InitiativeCard(){
           <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
-              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" 
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
             </div>
             <div className="relative my-auto">
               <h2 className="text-left text-5xl">Indiescussion</h2>
@@ -49,7 +57,11 @@ export default function InitiativeCard(){
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10  justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
-              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" 
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
             </div>
             <div className="relative my-auto">
               <h2 className="text-left text-5xl">A2IM:ARTIST</h2>
@@ -67,7 +79,11 @@ export default function InitiativeCard(){
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto gap-10 justify-between hover:scale-105 p-10">
           <div className="flex flex-row my-auto">
             <div className="relative a2imbuttonbox h-28 w-28">
-              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" style={{objectFit:"contain"}}/>
+              <Image src="/logos/A2IM-logos/A2IM-button-white.png" fill alt="a2im logo" 
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
             </div>
             <div className="relative my-auto">
               <h2 className="text-left text-5xl">BIMA</h2>

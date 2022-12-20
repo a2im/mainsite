@@ -5,9 +5,9 @@ import { ButtonInternal } from "./button";
 
 function About1 () {
     return (
-      <div className="mx-auto">
+      <div className="pt-20 md:pt-0 mx-auto">
           <div className="max-w-6xl mx-auto px-5">
-            <div className="z-10 flex flex-col-reverse md:flex-row items-center md:justify-around mx-auto gap-10">
+            <div className="z-10 flex flex-col md:flex-row items-center md:justify-around mx-auto gap-10">
               <div className="flex-initial relative md:py-20 items-center max-w-xl">
                 <h2> ABOUT A2IM</h2>
                 <hr className="border-a2impurple my-5"></hr>
@@ -20,18 +20,15 @@ function About1 () {
                 </h4>
               <ButtonInternal href='/about-us/join-a2im'>JOIN NOW</ButtonInternal>
               </div>
-              <div className="flex-initial w-1/2 m-10 max-w-xl">
+              <div className="relative w-96 h-96 m-10">
                 <Image
                   src="/images/bg-mixer.webp"
                   alt='indie week opening reception'
-                  width={300}
-                  height={300}
-                  sizes="100vw"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "contain"
-                  }} />
+                  fill
+                  style={{objectFit:"contain"}}
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw" />
               </div>
             </div>
           </div>
@@ -56,18 +53,15 @@ function About2 () {
                 </h4>
                 <ButtonInternal href='/about-us/join-a2im'>JOIN NOW</ButtonInternal>
               </div>
-              <div className="flex-initial w-1/2 m-10 max-w-xl">
+              <div className="relative w-96 h-96 m-10">
                 <Image
                   src="/images/bg-classroom.jpg"
                   alt='indie week meeting room'
-                  width={300}
-                  height={300}
-                  sizes="100vw"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "contain"
-                  }} />
+                  fill
+                  style={{objectFit:"contain"}}
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw" />
               </div>
             </div>
           </div>
@@ -84,11 +78,11 @@ function About3 () {
             <Image
               src="/images/bg-community.webp"
               alt='a2im community photo'
-              fill={true}
-              sizes="100vw"
-              style={{
-                objectFit: "contain"
-              }} />
+              fill
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw" />
           </div>
           <div className="relative text-right max-w-lg">
             <h2>OUR COMMUNITY</h2>

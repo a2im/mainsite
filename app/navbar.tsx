@@ -16,12 +16,15 @@ export default function MyNavbar() {
             <div className="flex items-center justify-between md:block">
               <Link href={"/"}>
               <div className="flex justify-center gap-10 grid-cols-2">
-              <div className="relative a2imbuttonbox ml-2 w-10">
+              <div className="relative ml-2 w-10 h-10">
                 <Image
                   src="/logos/A2IM-logos/A2IM-button-white.png"
                   alt="a2im logo button"
-                  fill={true}
-                  sizes="100vw"
+                  fill
+                  style={{objectFit:"contain"}}
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
                   className="hover:scale-105" />
                 </div>
                 <div className="mt-1">

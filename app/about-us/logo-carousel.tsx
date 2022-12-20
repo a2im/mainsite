@@ -27,61 +27,84 @@ const responsive = {
 export default function LogoCarousel(){
     return(
         <Carousel responsive={responsive}>
-  <div className="relative">
-    <Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-logo.png'} width={768} height={324} alt="a2im full logo"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-logo-white.png'} width={768} height={324} alt="a2im full logo"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-button-black.png'} width={1200} height={1200} alt="a2im button logo"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-logo.png'} width={768} height={324} alt="a2im full logo"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-logo-white.png'} width={768} height={324} alt="a2im full logo"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-button-black.png'} width={1200} height={1200} alt="a2im button logo"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-</Link>
-</div>
-<div>
-<Link href="https://a2im.org">
-<Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-</Link>
-</div>
+          <div className="relative">
+            <Link href="https://a2im.org">
+              <div className="relative w-10 h-10">
+                <Image src={'/logos/A2IM-logos/A2IM-logo.png'} 
+                alt="a2im full logo"
+                fill
+                style={{objectFit:"contain"}}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"/>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <Link href="https://a2im.org">
+              <div className="relative w-10 h-10">
+                <Image src={'/logos/A2IM-logos/A2IM-logo-white.png'} 
+                alt="a2im full logo"
+                fill
+                style={{objectFit:"contain"}}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"/>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <Link href="https://a2im.org">
+            <div className="relative w-10 h-10">
+                <Image src={'/logos/A2IM-logos/A2IM-button-black.png'} 
+                alt="a2im button logo"
+                fill
+                style={{objectFit:"contain"}}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"/>
+              </div>
+            </Link>
+          </div>
+          <div className="relative">
+            <Link href="https://a2im.org">
+              <div className="relative w-10 h-10">
+                <Image src={'/logos/A2IM-logos/A2IM-logo.png'} 
+                alt="a2im full logo"
+                fill
+                style={{objectFit:"contain"}}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"/>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <Link href="https://a2im.org">
+              <div className="relative w-10 h-10">
+                <Image src={'/logos/A2IM-logos/A2IM-logo-white.png'} 
+                alt="a2im full logo"
+                fill
+                style={{objectFit:"contain"}}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"/>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <Link href="https://a2im.org">
+            <div className="relative w-10 h-10">
+                <Image src={'/logos/A2IM-logos/A2IM-button-black.png'} 
+                alt="a2im button logo"
+                fill
+                style={{objectFit:"contain"}}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"/>
+              </div>
+            </Link>
+          </div>
 </Carousel>
     )
 }

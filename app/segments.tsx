@@ -39,18 +39,18 @@ export function LargeJoinButtonSegmentLight () {
 
 export function MissionStatement () {
     return (
-            <div className="py-20 bg-stone-900 text-white">
-            <div className="flex mx-auto justify-center gap-3">
-            <div className="relative ml-2 w-12 h-12 hover:scale-105">
-            <Link href="/">
-                <Image
-                    className="object-center"
+            <div className="relative py-20 bg-stone-900 text-white">
+            <div className="flex flex-col mx-auto justify-center gap-3">
+                    <div className="relative ml-2 w-12 h-12 hover:scale-105">
+                    <Image
                     src="/logos/A2IM-logos/A2IM-button-white.png"
                     alt="a2im logo button"
-                    fill={true}
-                    sizes="100vw" />
-                    </Link>
-                </div>
+                    fill
+                    style={{objectFit:"contain"}}
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw" />
+                    </div>
             <h2 className="text-center pb-5">MISSION STATEMENT:</h2>
             </div>
             <h4 className="mx-auto text-center pb-10 max-w-5xl">

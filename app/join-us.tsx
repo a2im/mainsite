@@ -1,8 +1,7 @@
 import React from "react"
 import Image from "next/image";
 import MemberBenefits from "./member-benefits";
-import { ButtonInternal, ButtonExternal } from "./button";
-import { PolicyStatement, JoinButtonSegment, LargeJoinButtonSegmentDark  } from "./segments";
+import { JoinButtonSegment, LargeJoinButtonSegmentDark  } from "./segments";
 
 function Join1 () {
     return (
@@ -16,18 +15,15 @@ function Join1 () {
                 </h4>
 
               </div>
-              <div className="flex-initial w-1/2 m-10 max-w-xl">
+              <div className="relative w-64 h-64 m-10 max-w-xl">
                 <Image
                   src="/images/red-arrow.png"
                   alt='indie week opening reception'
-                  width={300}
-                  height={300}
-                  sizes="100vw"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "contain"
-                  }} />
+                  fill
+                  style={{objectFit:"contain"}}
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw" />
               </div>
             </div>
           </div>
@@ -53,11 +49,11 @@ function Join3 () {
             <Image
               src="/images/bg-community.webp"
               alt='a2im community photo'
-              fill={true}
-              sizes="100vw"
-              style={{
-                objectFit: "contain"
-              }} />
+              fill
+              style={{objectFit:"contain"}}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw" />
           </div>
           <div className="relative max-w-lg">
             <h2>BEING AN A2IM MEMBER</h2>

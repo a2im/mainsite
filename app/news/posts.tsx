@@ -27,6 +27,9 @@ export function PostsList() {
                     style={{objectFit: "cover"}}
                     alt={posts.attributes.coverImage.data.attributes.alternativeText} 
                     className="mx-auto object-center"
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
                     />
                     </div>
                     <div className="">
