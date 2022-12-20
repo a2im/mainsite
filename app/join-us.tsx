@@ -42,10 +42,10 @@ function BenefitList () {
 
 function Join3 () {
       return ( 
-    <div className="mx-auto pt-5">
+    <div className="mx-auto pt-5 pb-10">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-6xl flex flex-col-reverse md:flex-row-reverse md:justify-around items-center mx-auto gap-10">
-          <div className="relative m-10 w-[400px] h-[400px]">
+          <div className="relative p-5 w-[400px] h-[400px]">
             <Image
               src="/images/bg-community.webp"
               alt='a2im community photo'
@@ -55,7 +55,7 @@ function Join3 () {
               (max-width: 1200px) 50vw,
               33vw" />
           </div>
-          <div className="relative max-w-lg">
+          <div className="relative max-w-lg p-5">
             <h2>BEING AN A2IM MEMBER</h2>
 <hr className="border-a2impurple my-5"></hr>
             <p>

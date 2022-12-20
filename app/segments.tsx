@@ -16,7 +16,7 @@ export function LargeJoinButtonSegmentDark () {
         <div className="py-10 bg-stone-900 text-white mx-auto">
         <div className="max-w-4xl mx-auto">
             <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
-        <div className="flex mx-auto justify-center">
+            <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
         <ButtonInternal href='/community'>COMMUNITY</ButtonInternal>
         </div>
@@ -29,7 +29,7 @@ export function LargeJoinButtonSegmentLight () {
         <div className="py-10 bg-stone-50 text-black mx-auto">
         <div className="max-w-4xl mx-auto">
             <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
-        <div className="flex mx-auto justify-center">
+        <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
         <ButtonInternal href='/community'>COMMUNITY</ButtonInternal>
         </div>
@@ -40,8 +40,9 @@ export function LargeJoinButtonSegmentLight () {
 export function MissionStatement () {
     return (
             <div className="relative py-20 bg-stone-900 text-white">
-            <div className="flex flex-col mx-auto justify-center gap-3">
-                    <div className="relative ml-2 w-12 h-12 hover:scale-105">
+            <div className="flex flex-col mx-auto justify-center">
+                <div className="flex flex-row mx-auto">
+                    <div className="relative w-12 h-12 hover:scale-105 invisible md:visible">
                     <Image
                     src="/logos/A2IM-logos/A2IM-button-white.png"
                     alt="a2im logo button"
@@ -49,7 +50,8 @@ export function MissionStatement () {
                     style={{objectFit:"contain"}}
                     sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
-                    33vw" />
+                    33vw"
+                    />
                     </div>
             <h2 className="text-center pb-5">MISSION STATEMENT:</h2>
             </div>
@@ -59,6 +61,7 @@ export function MissionStatement () {
             And Opportunities For Independent Music Through 
             Advocacy, Education And Community.
             </h4>
+            </div>
             </div>
     )}
     

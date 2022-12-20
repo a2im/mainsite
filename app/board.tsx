@@ -8,7 +8,7 @@ function MainBoard(){
             <h2 className="1/6">Board of Directors</h2>
             <hr className="border-a2impurple my-5"></hr>
             </div>
-        <div className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-5 p-8 mb-20'>
+        <div className='mt-10 grid grid-cols-0 md:grid-cols-4 gap-5 p-8 mb-20'>
         {BoD2022.map(BoD2022 => (
           <button key={BoD2022.id} className="p-10 drop-shadow-4xl hover:scale-105 max-w-64 border-4 mx-auto my-auto hover:bg-libera-pink hover:text-white">
           <h3 className='p-3 text-3xl font-medium mb-2 tracking-tight'>
@@ -36,7 +36,7 @@ function AdvBoard(){
             <h2 className="1/6">Advisory Board</h2>
             <hr className="border-a2impurple my-5"></hr>
             </div>
-        <div className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-5 p-8 mb-20'>
+        <div className='mt-10 grid grid-cols-0 md:grid-cols-4 gap-5 p-8 mb-20'>
         {AdvBoD2022.map(AdvBoD2022 => (
           <button key={AdvBoD2022.id} className="p-10 drop-shadow-4xl hover:scale-105 max-w-64 border-4 mx-auto my-auto hover:bg-libera-pink hover:text-white">
           <h3 className='p-3 text-3xl font-medium mb-2 tracking-tight'>

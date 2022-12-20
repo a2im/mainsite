@@ -380,7 +380,7 @@ export function AssociateBenefits () {
 
 export default function MemberBenefits () {
     return (
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-0 md:grid-cols-2 gap-10">
         <LabelBenefits/>
         <AssociateBenefits/>
         </div>
