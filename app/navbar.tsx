@@ -10,7 +10,7 @@ export default function MyNavbar() {
   useOnClickOutside(ref, () => setNavbar(false));
   return (
     <div>
-      <nav className="bggradient w-full fixed z-50 shadow-2xl px-5">
+      <nav className="bg-stone-900 w-full fixed z-50 shadow-2xl px-5">
         <div className="max-w-5xl justify-between mx-auto items-center md:flex">
           <div>
             <div className="flex items-center justify-between md:block">

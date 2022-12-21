@@ -18,7 +18,7 @@ export function LargeJoinButtonSegmentDark () {
             <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
             <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
-        <ButtonInternal href='/community'>COMMUNITY</ButtonInternal>
+        <ButtonExternal href='https://membership.a2im.org/memberdirectory/FindStartsWith?term=%23%21'>COMMUNITY</ButtonExternal>
         </div>
         </div>
         </div>
@@ -31,7 +31,7 @@ export function LargeJoinButtonSegmentLight () {
             <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
-        <ButtonInternal href='/community'>COMMUNITY</ButtonInternal>
+        <ButtonExternal href='https://membership.a2im.org/memberdirectory/FindStartsWith?term=%23%21'>COMMUNITY</ButtonExternal>
         </div>
         </div>
         </div>

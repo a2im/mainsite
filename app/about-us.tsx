@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image";
-import { ButtonInternal } from "./button";
+import { ButtonInternal, ButtonExternal } from "./button";
 import { MissionStatement, IndieStatement, PolicyStatement } from "./segments";
 
 function About1 () {
@@ -99,7 +99,7 @@ function About3 () {
               </li>
             </ul>
             
-<ButtonInternal href='/community'>COMMUNITY</ButtonInternal>
+<ButtonExternal href='https://membership.a2im.org/memberdirectory/FindStartsWith?term=%23%21'>COMMUNITY</ButtonExternal>
           </div>
         </div>
       </div>
