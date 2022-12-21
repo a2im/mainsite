@@ -11,7 +11,7 @@ import {
 
 export function SocialFollowWhite() {
   return (
-    <div className="social-container text-white items-center content-center grid grid-cols-5 p-8 gap-8">           
+    <div className="text-white items-center content-center grid grid-cols-5">           
       <button className="hover:scale-105">
         <Link
           href="https://youtu.be/mV5DSttNOPE"
@@ -68,7 +68,7 @@ export function SocialFollowWhite() {
 
 export function SocialFollowBlack() {
   return (
-    <div className="social-container text-black items-center content-center grid grid-cols-5 p-8 gap-8">           
+    <div className="text-black items-center content-center grid grid-cols-5">           
       <button className="hover:scale-105">
         <Link
           href="https://youtu.be/mV5DSttNOPE"
