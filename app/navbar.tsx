@@ -25,6 +25,7 @@ export default function MyNavbar() {
                   sizes="(max-width: 768px) 100vw,
                   (max-width: 1200px) 50vw,
                   33vw"
+                  priority
                   className="hover:scale-105" />
                 </div>
                 <div className="mt-1">
@@ -94,7 +95,19 @@ export default function MyNavbar() {
                   <Link href="/about-us" onClick={() => setNavbar(false)}>
                   ABOUT
                   </Link>
-                  <ul className="-ml-2 md:lvl2 py-3 list-disc list-inside bg-stone-800 my-auto p-8 md:border-2 w-64 rounded-br-2xl rounded-bl-2xl rounded-tr-2xl">
+                  <ul className="-ml-2 md:lvl2 py-3 list-disc list-inside bg-stone-800 my-auto p-8 md:border-2 w-64 rounded-br-2xl rounded-bl-2xl rounded-tr-2xl">   
+                  <li className="
+                    text-left
+                    text-white 
+                    text-l
+                    uppercase 
+                    hover:scale-105 
+                    w-full
+                    ">
+                      <Link href="/about-us" onClick={() => setNavbar(false)}>
+                        ABOUT US
+                      </Link>
+                    </li>
                     <li className="
                     text-left
                     text-white 
@@ -107,6 +120,30 @@ export default function MyNavbar() {
                         JOIN
                       </Link>
                     </li>
+                    <li className="
+                    text-left
+                    text-white 
+                    text-l
+                    uppercase 
+                    hover:scale-105 
+                    w-full
+                    ">
+                      <Link href="/about-us#a2imboard" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
+                      Board of Directors
+                      </Link>
+                      </li>
+                      <li className="
+                    text-left
+                    text-white 
+                    text-l
+                    uppercase 
+                    hover:scale-105 
+                    w-full
+                    ">
+                      <Link href="/about-us#a2imstaff" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
+                      Our Staff
+                      </Link>
+                      </li>
                   </ul>
                 </li>
                 <li 
@@ -224,7 +261,7 @@ export default function MyNavbar() {
                     hover:scale-105 
                     w-full
                     ">
-                      <Link href="/lgd" onClick={() => setNavbar(false)}>
+                      <Link href="/events/lgd" onClick={() => setNavbar(false)}>
                         Let&apos;s Get Digital
                       </Link>
                       </li>
@@ -235,7 +272,7 @@ export default function MyNavbar() {
                     hover:scale-105 
                     w-full
                     ">
-                      <Link href="/panam" onClick={() => setNavbar(false)}>
+                      <Link href="/events/panam" onClick={() => setNavbar(false)}>
                         Pan-Am
                       </Link>
                     </li>

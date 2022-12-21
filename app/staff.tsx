@@ -2,7 +2,7 @@ import { Staff2022 } from "../lib/staff-data/staff-data"
 
 export default function Staff(){
     return (
-        <div className="mx-auto">
+        <div id="a2imstaff" className="mx-auto">
 <div className="flex flex-col md:flex-row max-w-6xl mx-auto px-5 pt-10">
             <div>
             <h2 className="1/6">A2IM Staff</h2>

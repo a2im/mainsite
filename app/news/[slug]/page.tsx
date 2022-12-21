@@ -43,7 +43,6 @@ const posts: PostRelationResponseCollection = await res.json()
   )
   )}
         </div>
-        <Footer />
     </div>
 }
 

@@ -2,7 +2,7 @@ import { BoD2022, AdvBoD2022 } from "../lib/board-data/board-data"
 
 function MainBoard(){
     return (
-        <div className="mx-auto">
+        <div id="a2imboard" className="mx-auto">
         <div className="flex flex-col md:flex-row mx-auto px-5 pt-10 max-w-6xl">
             <div>
             <h2 className="1/6">Board of Directors</h2>
@@ -30,7 +30,7 @@ function MainBoard(){
 
 function AdvBoard(){
     return (
-        <div className="mx-auto bg-stone-900 text-white">
+        <div id="a2imadvboard" className=" mx-auto bg-stone-900 text-white">
         <div className="flex flex-col md:flex-row mx-auto  px-5 pt-10 max-w-6xl">
             <div>
             <h2 className="1/6">Advisory Board</h2>
