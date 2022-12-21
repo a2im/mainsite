@@ -13,6 +13,10 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-NinetiesDisplay)']
       },
+      boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+        '4xl': '0 45px 70px -10px rgba(0, 0, 0, 0.5)',
+      }
     },
     screens: {
       sm: '640px',
