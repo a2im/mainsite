@@ -30,7 +30,7 @@ function MainBoard(){
 
 function AdvBoard(){
     return (
-        <div id="a2imadvboard" className=" mx-auto bg-stone-900 text-white">
+        <div id="a2imadvboard" className=" mx-auto bg-neutral-900 text-white">
         <div className="flex flex-col md:flex-row mx-auto  px-5 pt-10 max-w-6xl">
             <div>
             <h2 className="1/6">Advisory Board</h2>

@@ -86,30 +86,30 @@ export default function ContactForm() {
    };
   return (
             <form
-            className="rounded-3xl shadow-4xl flex flex-col p-5 hover:border-4 hover:-m-1 hover:mb-3">
-      <h4 className="text-center text-2xl font-bold pb-10">
+            className="rounded shadow-4xl flex flex-col p-5 hover:scale-105">
+      <h4 className="text-center text-2xl font-bold pb-5">
         SEND US A MESSAGE
         </h4>
       <label 
       htmlFor="fullname" 
-      className="text-xl">
+      className="text-l">
         Full name
-        <span className="text-red-500 dark:text-gray-50">*</span>
+        <span className="text-a2imred dark:text-stone-50">*</span>
         </label>
       <input 
       id={id} 
       type="text" 
       value={fullname} 
-      onChange={e => setFullname(e.target.value)} name="fullname" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500" />
-      <label htmlFor="email" className="text-xl">E-mail<span className="text-red-500">*</span></label>
-      <input id={id} type="email" value={email} onChange={e => setEmail(e.target.value)} name="email" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500" />
-      <label htmlFor="subject" className="text-xl">Subject<span className="text-red-500">*</span></label>
-      <input id={id} type="text" value={subject} onChange={e => setSubject(e.target.value)} name="subject" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500" />
-      <label htmlFor="message" className="text-xl">Message<span className="text-red-500">*</span></label>
-      <textarea id={id} value={message} onChange={e => setMessage(e.target.value)} name="message" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"></textarea>
+      onChange={e => setFullname(e.target.value)} name="fullname" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-a2imgreen font-light text-stone-300" />
+      <label htmlFor="email" className="text-l">E-mail<span className="text-a2imred">*</span></label>
+      <input id={id} type="email" value={email} onChange={e => setEmail(e.target.value)} name="email" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-a2imgreen font-light text-stone-300" />
+      <label htmlFor="subject" className="text-l">Subject<span className="text-a2imred">*</span></label>
+      <input id={id} type="text" value={subject} onChange={e => setSubject(e.target.value)} name="subject" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-a2imgreen font-light text-stone-300" />
+      <label htmlFor="message" className="text-l">Message<span className="text-a2imred">*</span></label>
+      <textarea id={id} value={message} onChange={e => setMessage(e.target.value)} name="message" className="bg-transparent border-b py-1 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-a2imgreen font-light text-stone-300"></textarea>
       <div className="flex flex-row items-center justify-start">
         <button 
-            className="drop-shadow-2xl max-h-21 justify-center leading-tight mx-auto mt-10 hover:scale-105 rounded-3xl shadow-2xl hover:border-4 hover:-mb-2 bg-stone-700"
+            className="max-h-21 justify-center leading-tight mx-auto mt-10 hover:scale-105 rounded shadow-4xl bggradient"
             onClick={handleSubmit}><h3 className="align-middle text-white text-2xl p-3 truncate font-bold tracking-tighter leading-tight">
             {buttonText}
             </h3>

@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <MyHead/>
       </head>
-      <body className="min-h-screen z-0 bg-stone-50 mx-auto">
+      <body className="min-h-screen z-0 bg-neutral-50 mx-auto">
         <Providers>
           <main className="mx-auto">
             {children}

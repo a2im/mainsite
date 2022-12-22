@@ -33,7 +33,7 @@ Celebrate the Independent Community</h2>
         </div>
 
   </div>
-  <div className="justify-center bg-stone-900 mx-auto">
+  <div className="justify-center bg-neutral-900 mx-auto">
         <ButtonInternal href="/about-us">LEARN MORE</ButtonInternal>
         </div>
   </div>

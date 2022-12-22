@@ -10,7 +10,7 @@ export default function Events() {
   LGD
   </h2>
   </div>
-  <div className="bg-stone-900 text-white">
+  <div className="bg-neutral-900 text-white">
   </div>
   <LargeJoinButtonSegmentLight/>
           <Footer/>

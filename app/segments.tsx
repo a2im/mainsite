@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function JoinButtonSegment () {
     return (
-        <div className="py-20 bg-stone-900 text-white">
+        <div className="py-20 bg-neutral-900 text-white">
         <div className="flex mx-auto justify-center gap-3">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
         </div>
@@ -13,7 +13,7 @@ export function JoinButtonSegment () {
 
 export function LargeJoinButtonSegmentDark () {
     return (
-        <div className="py-10 bg-stone-900 text-white mx-auto">
+        <div className="py-10 bg-neutral-900 text-white mx-auto">
         <div className="max-w-4xl mx-auto">
             <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
             <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">
@@ -39,7 +39,7 @@ export function LargeJoinButtonSegmentLight () {
 
 export function MissionStatement () {
     return (
-            <div className="relative py-20 bg-stone-900 text-white">
+            <div className="relative py-20 bg-neutral-900 text-white">
             <div className="flex flex-col mx-auto justify-center">
                 <div className="flex flex-row mx-auto">
                     <div className="relative w-12 h-12 hover:scale-105 invisible md:visible">
@@ -67,14 +67,14 @@ export function MissionStatement () {
     
 export function IndieStatement () {
     return ( 
-        <div className="py-20 bg-stone-900 text-white">
+        <div className="py-20 bg-neutral-900 text-white">
         <h4 className="mx-auto text-center pb-10 max-w-5xl">“Independent” doesn’t refer to a specific genre of music, nor does it mean lesser-known artists: A2IM member labels have issued music releases by artists including Taylor Swift, Mumford & Sons, The Lumineers, Adele, Alabama Shakes, Arcade Fire, Run the Jewels, Bon Iver, and many others.</h4>
         </div>
         )}
 
 export function PolicyStatement () {
     return ( 
-    <div className="py-20 bg-stone-900 text-white">
+    <div className="py-20 bg-neutral-900 text-white">
         <h4 className="mx-auto text-center pb-10 max-w-5xl">
             As an organization, A2IM is committed to protecting 
             the value of independent musical contributions and 

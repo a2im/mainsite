@@ -42,13 +42,13 @@ export default function MyModal (){
                 <motion.div
                 ref={ref}
                 onClick={(e) => e.stopPropagation()}
-                className="fixed iwborder p-5 modalinfo w-96"
+                className="fixed rounded shadow-4xl bg-neutral-800 p-5 w-96"
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
                 >
-                    <div className="grid grid-cols-0 p-5 relative">
+                    <div className="grid grid-cols-0 p-5 relative hover:scale-105">
                   <h3 className="text-white text-xl font-bold">INDIE WEEK INFO</h3>
                   <p className="text-white">
                   A2IM Indie Week is a four-day international conference and networking 

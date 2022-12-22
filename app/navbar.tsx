@@ -10,7 +10,7 @@ export default function MyNavbar() {
   useOnClickOutside(ref, () => setNavbar(false));
   return (
     <div>
-      <nav className="bg-stone-900 w-full fixed z-50 shadow-2xl px-5">
+      <nav className="bg-neutral-900 w-full fixed z-50 shadow-2xl px-5">
         <div className="max-w-5xl justify-between mx-auto items-center md:flex">
           <div>
             <div className="flex items-center justify-between md:block">
@@ -94,7 +94,7 @@ export default function MyNavbar() {
                 md:hover:-mb-11
                 hover:pb-10
                 hover:scale-105 
-                hover:bg-stone-900
+                hover:bg-neutral-900
                 rounded
                 ">
                   <Link href="/about-us" onClick={() => setNavbar(false)}>
@@ -108,7 +108,7 @@ export default function MyNavbar() {
                   pt-2 
                   pb-4 
                   bg-stone-800
-                  md:bg-stone-900 
+                  md:bg-neutral-900 
                   my-auto 
                   p-8 
                   w-64 
@@ -131,7 +131,7 @@ export default function MyNavbar() {
                         ABOUT US
                       </Link>
                     </li>
-                    <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                    <hr className="a2im-border-wrap1 border-transparent mx-auto"></hr>
                     <li className="
                     text-center
                     md:text-left 
@@ -146,7 +146,7 @@ export default function MyNavbar() {
                         JOIN
                       </Link>
                     </li>
-                    <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                    <hr className="a2im-border-wrap3 border-transparent mx-auto"></hr>
                     <li className="
                     text-center
                     md:text-left 
@@ -161,7 +161,7 @@ export default function MyNavbar() {
                       Board of Directors
                       </Link>
                       </li>
-                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                      <hr className="a2im-border-wrap4 border-transparent mx-auto"></hr>
                       <li className="
                     text-center
                     md:text-left 
@@ -178,7 +178,7 @@ export default function MyNavbar() {
                       </li>
                   </ul>
                 </li>
-                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
+                <hr className="md:hidden a2im-border-wrap3 border-transparent mx-auto"></hr>
                 <li 
                   className="
                   py-2
@@ -192,7 +192,7 @@ export default function MyNavbar() {
                   md:hover:-mb-11
                   hover:pb-10
                   hover:scale-105 
-                  hover:bg-stone-900
+                  hover:bg-neutral-900
                   rounded
                   ">
                   <Link href="/initiatives" onClick={() => setNavbar(false)}>
@@ -206,7 +206,7 @@ export default function MyNavbar() {
                   pt-2 
                   pb-4 
                   bg-stone-800
-                  md:bg-stone-900 
+                  md:bg-neutral-900 
                   my-auto 
                   p-8 
                   w-64 
@@ -229,7 +229,7 @@ export default function MyNavbar() {
                           Indiescussion
                         </Link>
                       </li>
-                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                      <hr className="a2im-border-wrap1 border-transparent mx-auto"></hr>
                       <li className="
                       text-center
                       md:text-left 
@@ -244,7 +244,7 @@ export default function MyNavbar() {
                           Mentor Program
                         </Link>
                       </li>
-                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                      <hr className="a2im-border-wrap4 border-transparent mx-auto"></hr>
                       <li className="
                       text-center
                       md:text-left 
@@ -258,7 +258,7 @@ export default function MyNavbar() {
                         <Link href="https://a2imartist.xyz" onClick={() => setNavbar(false)}>
                           A2IM:Artist
                         </Link>
-                        <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                        <hr className="a2im-border-wrap2 border-transparent mx-auto"></hr>
                       </li>
                       <li className="
                       text-center
@@ -276,7 +276,7 @@ export default function MyNavbar() {
                       </li>
                     </ul>
                 </li>
-                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
+                <hr className="md:hidden a2im-border-wrap1 border-transparent mx-auto"></hr>
                 <li 
                   className="
                   py-2
@@ -293,7 +293,7 @@ export default function MyNavbar() {
                     NEWS
                   </Link>
                 </li>
-                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
+                <hr className="md:hidden a2im-border-wrap3 border-transparent mx-auto"></hr>
                 <li className="
                   py-2
                   md:py-0
@@ -306,7 +306,7 @@ export default function MyNavbar() {
                   md:hover:-mb-11
                   hover:pb-10
                   hover:scale-105 
-                  hover:bg-stone-900
+                  hover:bg-neutral-900
                   rounded
                   ">
                   <Link href="/events" onClick={() => setNavbar(false)}>
@@ -320,7 +320,7 @@ export default function MyNavbar() {
                   pt-2 
                   pb-4 
                   bg-stone-800
-                  md:bg-stone-900 
+                  md:bg-neutral-900 
                   my-auto 
                   p-8 
                   w-64 
@@ -343,7 +343,7 @@ export default function MyNavbar() {
                         Indieweek
                       </Link>
                       </li>
-                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                      <hr className="a2im-border-wrap1 border-transparent mx-auto"></hr>
                       <li className="
                     text-center
                     md:text-left
@@ -357,7 +357,7 @@ export default function MyNavbar() {
                         Libera Awards
                       </Link>
                       </li>
-                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                      <hr className="a2im-border-wrap4 border-transparent mx-auto"></hr>
                       <li className="
                     text-center
                     md:text-left
@@ -371,7 +371,7 @@ export default function MyNavbar() {
                         Let&apos;s Get Digital
                       </Link>
                       </li>
-                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
+                      <hr className="a2im-border-wrap2 border-transparent mx-auto"></hr>
                       <li className="
                     text-center
                     md:text-left
@@ -387,7 +387,7 @@ export default function MyNavbar() {
                     </li>
                   </ul>
                 </li>
-                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
+                <hr className="md:hidden a2im-border-wrap4 border-transparent mx-auto"></hr>
                 <li 
                   className="py-2 md:py-0 text-white text-l uppercase px-2 hover:scale-105 text-center
                   md:text-left">

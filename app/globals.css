@@ -1,20 +1,46 @@
 @tailwind base;
 
-.a2im-border-wrap {
+.a2im-border-wrap1 {
   max-width: 250px;
   padding: 1rem;
   position: relative;
-  background: linear-gradient(to right, #ff1827, #004bd9, #971ea5,#ff8e00, #55e2a6);
+  background: linear-gradient(-129deg, #ff1827, #004bd9, #971ea5,#ff8e00, #55e2a6);
   padding: 0.5px;
+  background-size: 300% 300%;
+}
+.a2im-border-wrap2 {
+  max-width: 250px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(-12deg, #55e2a6, #ff8e00,#004bd9, #971ea5,#ff1827 );
+  padding: 0.5px;
+  background-size: 300% 300%;
+}
+.a2im-border-wrap3 {
+  max-width: 250px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(129deg, #971ea5,#ff1827, #004bd9,#ff8e00, #55e2a6);
+  padding: 0.5px;
+  background-size: 300% 300%;
+}
+.a2im-border-wrap4 {
+  max-width: 250px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(-112deg, #ff1827, #971ea5,#ff8e00, #55e2a6,#004bd9);
+  padding: 0.5px;
+  background-size: 300% 300%;
 }
 
 .bggradient {
   scale: 110%;
-  background: linear-gradient(-90deg, #ff1827, #004bd9, #971ea5,#ff8e00, #55e2a6);
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
+  background: linear-gradient(-165deg, #ff1827, #004bd9, #971ea5,#ff8e00, #55e2a6);
+  background-size: 800% 800%;
+  animation: gradient 18s ease infinite;
   color: #fafaf9;
 }
+
 
 .four-point-star::after,
 .four-point-star::before {
@@ -33,29 +59,6 @@
     position: relative;
 }
 
-
-.modalinfobg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
- .modalinfo {
-  position: absolute;
-	background: #1c1917;
-	background-size: 400% 400%;
-  border-radius: 50px; 
-	animation: gradient 15s ease infinite;
-  padding: 8px;
-  margin: auto;
-  align-items: stretch;
-  display: flex;
-  z-index: 90;
- }
-
  .modalbuttonbg {
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -63,15 +66,6 @@
   border-bottom-right-radius: 25px;
  } 
 
- .iwbuttonsolid {
-  border-radius: 30px;
-  background-color: #fafaf9;
-  color: #1c1917;
-  font-size: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  text-transform: uppercase;
-}
 /* Write your own custom base styles here */
 .accordion {
   padding: 20px;
@@ -197,15 +191,6 @@
 /* Stop purging. */
 
 /* Write you own custom component styles here */
-.iwbuttonsolid {
-  border-radius: 30px;
-  background-color: #fafaf9;
-  color: #1c1917;
-  font-size: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  text-transform: uppercase;
-}
 
 .image-cropper {
   position: relative;
@@ -255,57 +240,27 @@
   border-color: white;
 }
 
-.iwborder {
-  position: relative;
-}
-.iwborder::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50px; 
-  border-style: groove;
-  padding: 6px; 
-  background: #fafaf9;
-  -webkit-mask: 
-     linear-gradient(#fafaf9 0 0) content-box, 
-     linear-gradient(#fafaf9 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude; 
-}
-
-.iwborder2 {
-  position: relative;
-}
-.iwborder2::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50px; 
-  border-style: groove;
-  padding: 6px; 
-  background: #fafaf9;
-  -webkit-mask: 
-     linear-gradient(#fafaf9 0 0) content-box, 
-     linear-gradient(#fafaf9 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude; 
-}
-
 .iwnavbar {
 	background: linear-gradient(-90deg, rgba(255, 24, 39, 1), #1c1917, rgba(255, 24, 39, 1));
-	background-size: 200% 200%;
+	background-size: 300% 300%;
 	animation: gradient 13s ease infinite;
 }
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 50%;
+		background-position: 0% 100%;
+	}
+	25% {
+		background-position: 100% 10%;
 	}
 	50% {
-		background-position: 100% 50%;
+		background-position: 60% 60%;
+	}
+  75% {
+		background-position: 30% 20%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 0% 100%;
 	}
 }
 

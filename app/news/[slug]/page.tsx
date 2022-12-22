@@ -11,7 +11,7 @@ export default async function MyPost({params,}: { params: {
 const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${params.slug}`);
 const posts: PostRelationResponseCollection = await res.json()
 
-  return <div className="pt-16 bg-stone-50 pb-20">
+  return <div className="pt-16 bg-neutral-50 pb-20">
     <div className="max-w-5xl mx-auto text-4xl ">
 <Link href="/news">
     <FontAwesomeIcon icon="arrow-left-long" className="ml-16 hover:scale-105"/>

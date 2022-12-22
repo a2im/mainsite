@@ -8,7 +8,7 @@ import ContactForm from "./contact/contact-form";
 export default function Footer() {
   return (
     <footer className="w-full absolute">
-      <div className="bg-stone-900 md:py-10 z-1">
+      <div className="bg-neutral-900 md:py-10 z-1">
         <AdBanner/>
         <div className="flex flex-col-reverse md:flex-row mx-auto justify-center content-center max-w-6xl">
           <div className="relative grid grid-cols-0 max-w-4xl mx-auto justify-center md:gap-9 py-20 px-10 md:p-10">

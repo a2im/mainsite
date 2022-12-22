@@ -11,7 +11,7 @@ import {
 export function LabelBenefits () {
     return (
 
-<div className="max-w-4xl mx-auto bg-stone-900 text-white px-8">
+<div className="max-w-4xl mx-auto bg-neutral-900 text-white px-8">
     <h3 className="pt-5">Label Membership</h3>
         <hr className="border-a2imblue my-5"></hr>
             <p>
@@ -242,7 +242,7 @@ export function LabelBenefits () {
 export function AssociateBenefits () {
     return (
 
-<div className="max-w-4xl mx-auto bg-stone-900 text-white px-8">
+<div className="max-w-4xl mx-auto bg-neutral-900 text-white px-8">
                       <h3 className="pt-5">Associate Membership</h3>
                       <hr className="border-a2imblue my-5"></hr>
               <p>
