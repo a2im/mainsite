@@ -46,7 +46,7 @@ const posts: PostRelationResponseCollection = await res.json()
 }
 
 export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate=*`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?filters[app][Name][$eq]=Mainsite&publicationState=live&populate=*&sort=Date%3Adesc&pagination[pageSize]=25&pagination[page]=1`);
   const data: PostEntityResponseCollection = await res.json();
   return data?.data?.map((data) => ({
     slug: data.attributes.slug,

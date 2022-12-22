@@ -51,7 +51,7 @@ query getLiberaAds($isActive: Boolean, $Name: String!) {
 
 export const GET_ALL_POSTS = gql`
 query AllPosts($PublicationState: PublicationState, $Name: String! ){
-  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, sort: "id:DESC"){
+  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, pagination: {page: 1, pageSize: 20}, sort: "id:DESC"){
     data {
       id
       attributes {
@@ -71,6 +71,14 @@ query AllPosts($PublicationState: PublicationState, $Name: String! ){
         slug
         Body
         Excerpt
+      }
+    },
+    meta {
+      pagination {
+        total
+        page
+        pageSize
+        pageCount
       }
     }
   }
