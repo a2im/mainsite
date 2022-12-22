@@ -7,11 +7,10 @@ import Image from "next/image";
 
 export function PostsList() {
   const router = useRouter()
-  const { loading, error, refetch, data } = useQuery(GET_ALL_POSTS, { 
+  const { loading, error, data } = useQuery(GET_ALL_POSTS, { 
     variables: {
       PublicationState: "LIVE",
       Name: "Mainsite",
-      Page: 1,
     }});
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
@@ -48,7 +47,6 @@ export function PostsList() {
               )
             )}
             </div>
-            <button onClick={() => refetch({ Page: 2 })}>Click Here</button>
         </div>
     );
 }
