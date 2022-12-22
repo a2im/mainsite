@@ -77,10 +77,16 @@ export default function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul ref={ref} className="md:flex md:lvl1">
+              <ul ref={ref} className="
+              md:lvl1 
+              md:flex 
+              ">
                 <li 
                 className="
-                text-left 
+                py-2
+                md:py-0
+                text-center
+                md:text-left 
                 text-white 
                 text-l 
                 uppercase 
@@ -88,57 +94,83 @@ export default function MyNavbar() {
                 md:hover:-mb-11
                 hover:pb-10
                 hover:scale-105 
-                hover:border-2 
-                hover:bg-stone-800
-                rounded-xl 
+                hover:bg-stone-900
+                rounded
                 ">
                   <Link href="/about-us" onClick={() => setNavbar(false)}>
                   ABOUT
                   </Link>
-                  <ul className="-ml-2 md:lvl2 py-3 list-disc list-inside bg-stone-800 my-auto p-8 md:border-2 w-64 rounded-br-2xl rounded-bl-2xl rounded-tr-2xl">   
+                  <ul className="
+                  mx-auto
+                  md:-ml-4 
+                  md:lvl2 
+                  py-3 
+                  pt-2 
+                  pb-4 
+                  bg-stone-800
+                  md:bg-stone-900 
+                  my-auto 
+                  p-8 
+                  w-64 
+                  rounded-br 
+                  rounded-bl 
+                  rounded-tr
+                  shadow-4xl
+                  ">   
                   <li className="
-                    text-left
+                    text-center
+                    md:text-left 
                     text-white 
                     text-l
                     uppercase 
                     hover:scale-105 
                     w-full
+                    py-2
                     ">
                       <Link href="/about-us" onClick={() => setNavbar(false)}>
                         ABOUT US
                       </Link>
                     </li>
+                    <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                     <li className="
-                    text-left
+                    text-center
+                    md:text-left 
                     text-white 
                     text-l
                     uppercase 
                     hover:scale-105 
                     w-full
+                    py-2
                     ">
                       <Link href="/about-us/join-a2im" onClick={() => setNavbar(false)}>
                         JOIN
                       </Link>
                     </li>
+                    <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                     <li className="
-                    text-left
+                    text-center
+                    md:text-left 
                     text-white 
                     text-l
                     uppercase 
                     hover:scale-105 
                     w-full
+                    py-2
                     ">
                       <Link href="/about-us#a2imboard" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
                       Board of Directors
                       </Link>
                       </li>
+                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                       <li className="
-                    text-left
+                    text-center
+                    md:text-left 
                     text-white 
                     text-l
                     uppercase 
                     hover:scale-105 
                     w-full
+                    py-2
                     ">
                       <Link href="/about-us#a2imstaff" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
                       Our Staff
@@ -146,8 +178,13 @@ export default function MyNavbar() {
                       </li>
                   </ul>
                 </li>
+                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
                 <li 
-                  className="text-left 
+                  className="
+                  py-2
+                  md:py-0
+                  text-center
+                  md:text-left  
                   text-white 
                   text-l 
                   uppercase 
@@ -155,52 +192,83 @@ export default function MyNavbar() {
                   md:hover:-mb-11
                   hover:pb-10
                   hover:scale-105 
-                  hover:border-2 
-                  hover:bg-stone-800
-                  rounded-xl">
+                  hover:bg-stone-900
+                  rounded
+                  ">
                   <Link href="/initiatives" onClick={() => setNavbar(false)}>
                     INITIATIVES
                   </Link>
-                  <ul className="-ml-2 md:lvl2 py-3 list-disc list-inside bg-stone-800 my-auto p-8 md:border-2 w-64 rounded-br-2xl rounded-bl-2xl rounded-tr-2xl">
+                  <ul className="
+                  mx-auto
+                  md:-ml-4 
+                  md:lvl2 
+                  py-3 
+                  pt-2 
+                  pb-4 
+                  bg-stone-800
+                  md:bg-stone-900 
+                  my-auto 
+                  p-8 
+                  w-64 
+                  rounded-br 
+                  rounded-bl 
+                  rounded-tr
+                  shadow-4xl
+                  ">
                       <li className="
-                      text-left
+                      text-center
+                      md:text-left 
                       mx-auto
                       text-white 
                       uppercase 
                       hover:scale-105 
+                      w-full
+                      py-2
                       ">
                         <Link href="/initiatives/indiescussion" onClick={() => setNavbar(false)}>
                           Indiescussion
                         </Link>
                       </li>
+                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                       <li className="
-                      text-left
+                      text-center
+                      md:text-left 
                       mx-auto
                       text-white 
                       uppercase 
                       hover:scale-105 
+                      w-full
+                      py-2
                       ">
                         <Link href="/initiatives/mentor-program" onClick={() => setNavbar(false)}>
                           Mentor Program
                         </Link>
                       </li>
+                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                       <li className="
-                      text-left
+                      text-center
+                      md:text-left 
                       mx-auto
                       text-white 
                       uppercase 
                       hover:scale-105 
+                      w-full
+                      py-2
                       ">
                         <Link href="https://a2imartist.xyz" onClick={() => setNavbar(false)}>
                           A2IM:Artist
                         </Link>
+                        <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                       </li>
                       <li className="
-                      text-left
+                      text-center
+                      md:text-left
                       mx-auto
                       text-white 
                       uppercase 
                       hover:scale-105 
+                      w-full
+                      py-2
                       ">
                         <Link href="https://a2imbima.xyz" onClick={() => setNavbar(false)}>
                           BIMA
@@ -208,15 +276,29 @@ export default function MyNavbar() {
                       </li>
                     </ul>
                 </li>
+                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
                 <li 
-                  className="text-left text-white text-l uppercase px-2 hover:scale-105">
+                  className="
+                  py-2
+                  md:py-0
+                  text-center
+                  md:text-left 
+                text-white 
+                  text-l 
+                  uppercase 
+                  px-2 
+                  hover:scale-105
+                  ">
                   <Link href="/news" onClick={() => setNavbar(false)} >
                     NEWS
                   </Link>
                 </li>
-                <li 
-                  className="
-                  text-left 
+                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
+                <li className="
+                  py-2
+                  md:py-0
+                  text-center
+                  md:text-left
                   text-white 
                   text-l 
                   uppercase 
@@ -224,53 +306,80 @@ export default function MyNavbar() {
                   md:hover:-mb-11
                   hover:pb-10
                   hover:scale-105 
-                  hover:border-2 
-                  hover:bg-stone-800
-                  rounded-xl
+                  hover:bg-stone-900
+                  rounded
                   ">
                   <Link href="/events" onClick={() => setNavbar(false)}>
                     EVENTS
                   </Link>
-                  <ul className="-ml-2 md:lvl2 py-3 list-disc list-inside bg-stone-800 my-auto p-8 md:border-2 w-64 rounded-br-2xl rounded-bl-2xl rounded-tr-2xl">
+                  <ul className="
+                  mx-auto
+                  md:-ml-4 
+                  md:lvl2 
+                  py-3 
+                  pt-2 
+                  pb-4 
+                  bg-stone-800
+                  md:bg-stone-900 
+                  my-auto 
+                  p-8 
+                  w-64 
+                  rounded-br 
+                  rounded-bl 
+                  rounded-tr
+                  shadow-4xl
+                  ">
                     <li className="
-                    text-left
+                    text-center
+                    md:text-left
                     mx-auto
                     text-white 
                     uppercase 
                     hover:scale-105 
+                    w-full
+                    py-2
                     ">
                       <Link href="https://indieweek.xyz" onClick={() => setNavbar(false)}>
                         Indieweek
                       </Link>
                       </li>
+                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                       <li className="
-                    text-left
+                    text-center
+                    md:text-left
                     text-white 
                     uppercase 
                     hover:scale-105 
                     w-full
+                    py-2
                     ">
                       <Link href="https://liberaawards.com" onClick={() => setNavbar(false)}>
                         Libera Awards
                       </Link>
                       </li>
+                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                       <li className="
-                    text-left
+                    text-center
+                    md:text-left
                     text-white 
                     uppercase 
                     hover:scale-105 
                     w-full
+                    py-2
                     ">
                       <Link href="/events/lgd" onClick={() => setNavbar(false)}>
                         Let&apos;s Get Digital
                       </Link>
                       </li>
+                      <hr className="a2im-border-wrap border-transparent mx-auto"></hr>
                       <li className="
-                    text-left
+                    text-center
+                    md:text-left
                     text-white 
                     uppercase 
                     hover:scale-105 
                     w-full
+                    py-2
                     ">
                       <Link href="/events/panam" onClick={() => setNavbar(false)}>
                         Pan-Am
@@ -278,8 +387,10 @@ export default function MyNavbar() {
                     </li>
                   </ul>
                 </li>
+                <hr className="md:hidden a2im-border-wrap border-transparent mx-auto"></hr>
                 <li 
-                  className="text-white text-l uppercase px-2 hover:scale-105 text-left">
+                  className="py-2 md:py-0 text-white text-l uppercase px-2 hover:scale-105 text-center
+                  md:text-left">
                   <Link href="/" onClick={() => setNavbar(false)}>
                     LOG IN
                   </Link>

@@ -1,5 +1,12 @@
 @tailwind base;
 
+.a2im-border-wrap {
+  max-width: 250px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #ff1827, #004bd9, #971ea5,#ff8e00, #55e2a6);
+  padding: 0.5px;
+}
 
 .bggradient {
   scale: 110%;
