@@ -1,4 +1,4 @@
-import { PostsList } from './posts'
+import { PaginatedItems } from './pagination'
 import Footer from '../footer'
 
 export default function News() {
@@ -10,8 +10,11 @@ export default function News() {
   NEWS
   </h1>
   </div>
-          <PostsList/>
+      <div id='container'>
+          <PaginatedItems postsPerPage={20} />
+          </div>
           <Footer />
     </div>
   )
 }
+

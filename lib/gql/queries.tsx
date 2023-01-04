@@ -50,8 +50,8 @@ query getLiberaAds($isActive: Boolean, $Name: String!) {
 `;
 
 export const GET_ALL_POSTS = gql`
-query AllPosts($PublicationState: PublicationState, $Name: String! ){
-  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, pagination: {page: 1, pageSize: 20}, sort: "id:DESC"){
+query AllPosts($PublicationState: PublicationState, $Name: String!, $Start: Int! ){
+  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, pagination: { start: $Start, limit: 20}, sort: "id:DESC"){
     data {
       id
       attributes {
@@ -176,3 +176,20 @@ query RecentNews ($PublicationState: PublicationState){
   }
 }
 `;
+
+export const GET_TOTAL_POSTS =  gql`
+query TotalPosts($PublicationState: PublicationState, $Name: String!, $postsOffset: Int!){
+  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, pagination: { start: $postsOffset, limit: 20}, sort: "id:DESC"){
+    data {
+      id
+    }
+    meta {
+      pagination {
+        total
+        page
+        pageSize
+        pageCount
+      }
+    }
+  }
+}`
