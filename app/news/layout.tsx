@@ -1,7 +1,11 @@
 import MyNavbar from '../navbar';
 
-export const dynamicParams = true
-export const revalidate = false
+export const dynamic = 'force-dynamic',
+  dynamicParams = true,
+  revalidate = false,
+  fetchCache = 'auto',
+  runtime = 'nodejs',
+  preferredRegion = 'auto'
 
 export default function RootLayout({
   children,
