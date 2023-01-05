@@ -6,9 +6,9 @@ export default function News() {
     <div>
           <title>A2IM - NEWS</title>
           <div className="relative grow shrink content-center">
-<h1 className="pt-20 grow font-bold align-middle text-center leading-tight">
+<h2 className="py-20 grow font-bold align-middle text-center leading-tight">
   NEWS
-  </h1>
+  </h2>
   </div>
       <div id='container'>
           <PaginatedItems postsPerPage={20} />

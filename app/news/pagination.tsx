@@ -21,11 +21,11 @@ function Posts({ Start }) {
     <div className="grid grid-cols-0 md:grid-cols-4 max-w-6xl mx-auto gap-10">
        {data.posts.data.map(posts => (
                 <div key={posts.id} className="mx-auto p-2 hover:scale-105 shadow-2xl w-64 max-h-96">
-                  <div className="relative LiberaBorder2 bg-white mx-auto h-[100] overflow-hidden">
+                  <div className="relative LiberaBorder2 bg-white mx-auto h-[140] overflow-hidden">
                   <Image 
                     src={posts.attributes.coverImage.data.attributes.url}
                     fill
-                    style={{objectFit: "cover"}}
+                    style={{objectFit: "contain"}}
                     alt={posts.attributes.coverImage.data.attributes.alternativeText} 
                     className="mx-auto object-center"
                     sizes="(max-width: 768px) 100vw,
@@ -37,12 +37,14 @@ function Posts({ Start }) {
                       <div className="max-h-[140px]">
                     <Link href={`/news/${posts.attributes.slug}`} 
                     onClick={() => router.push(`/news/${posts.attributes.slug}`)}>
-                      <h3 className="text-lg text-ellipsis overflow-hidden ...">{posts.attributes?.Title}</h3>
+                      <h3 className="text-sm text-ellipsis ...">{posts.attributes?.Title}</h3>
                     </Link>
                     </div>
-                    <p className="text-ellipsis overflow-hidden ...">
+                    <div className="static h-[100px] overflow-hidden">
+                    <p className="text-ellipsis whitespace-normal shadow-xl ...">
                     {posts.attributes?.Excerpt}
                     </p>
+                    </div>
                     </div>
                 </div>
               )
@@ -64,11 +66,11 @@ export function PaginatedItems({ postsPerPage }) {
     
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
-  const pageCount = Math.ceil(data.posts.meta.pagination.pageCount / postsPerPage);
+  const pageCount = data.posts.meta.pagination.pageCount;
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newPage = (event.selected * postsPerPage) % data.posts.meta.pagination.pageCount;
+    const newPage = event.selected * postsPerPage;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newPage}`
     );
@@ -78,16 +80,16 @@ export function PaginatedItems({ postsPerPage }) {
   return (
     <div id="container" >
       <Posts Start={postsOffset} />
-      <div className="max-w-6xl mx-auto justify-center content-center text-center inline">
+      <div className="flex flex-row max-w-6xl mx-auto justify-center content-center text-center">
       <ReactPaginate
         breakLabel="..."
         nextLabel="next >"
         onPageChange={handlePageClick}
-        pageRangeDisplayed={data.posts.meta.pagination.pageCount}
+        pageRangeDisplayed={2}
         pageCount={pageCount}
         previousLabel="< previous"
         renderOnZeroPageCount={null}
-        className="mx-auto"
+        className="mx-auto flex flex-row gap-3 py-20 text-lg font-bold uppercase active:text-a2imgreen"
       />
       </div>
     </div>
