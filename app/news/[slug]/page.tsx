@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PostRelationResponseCollection, PostEntityResponseCollection } from "../../../lib/gql/types";
+import { PostRelationResponseCollection } from "../../../lib/gql/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 

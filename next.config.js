@@ -18,6 +18,7 @@ module.exports = {
       'liberaawards.com',
       'liberaawards.a2im.xyz',
       'a2im-strapi-cms-images.s3.amazonaws.com',
+      'a2im.org'
     ],
     remotePatterns: [
       {
@@ -49,8 +50,13 @@ module.exports = {
         hostname: 'a2im-strapi-cms-images.s3.amazonaws.com',
         port: '80',
         pathname: '/***',
+      },
+      {
+        protocol: 'https',
+        hostname: 'a2im.org',
+        port: '80',
+        pathname: '/***',
       }
-
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; sandbox;",
