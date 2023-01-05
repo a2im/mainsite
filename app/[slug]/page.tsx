@@ -21,7 +21,7 @@ const posts: PostRelationResponseCollection = await res.json()
   {posts?.data.map(posts => (
             <div key={posts.id} className="mx-auto p-20 bg-white text-black">
              <div className="flex flex-row justify-content-evenly">
-              <Link href={`/news/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
+              <Link href={`/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
               <div className="relative w-[300px] h-[250px]">
               <Image 
                 src={posts.attributes?.coverImage?.data?.attributes?.url}

@@ -6,6 +6,7 @@ import ReactPaginate from 'react-paginate';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { Router } from "next/router";
 
 function Posts({ Start }) {
   const router = useRouter()
@@ -21,7 +22,7 @@ function Posts({ Start }) {
     <div className="grid grid-cols-0 md:grid-cols-4 max-w-6xl mx-auto gap-10">
        {data.posts.data.map(posts => (
                 <div key={posts.id} className="mx-auto p-2 hover:scale-105 shadow-2xl w-64 max-h-96">
-                  <div className="relative LiberaBorder2 bg-white mx-auto h-[140] overflow-hidden">
+                  <div className="relative bg-white mx-auto h-[140] overflow-hidden">
                   <Image 
                     src={posts.attributes.coverImage.data.attributes.url}
                     fill
@@ -35,8 +36,8 @@ function Posts({ Start }) {
                     </div>
                     <div className="">
                       <div className="max-h-[140px]">
-                    <Link href={`/news/${posts.attributes.slug}`} 
-                    onClick={() => router.push(`/news/${posts.attributes.slug}`)}>
+                    <Link href={`/${posts.attributes.slug}`} 
+                    onClick={() => router.push(`/${posts.attributes.slug}`)}>
                       <h3 className="text-sm text-ellipsis ...">{posts.attributes?.Title}</h3>
                     </Link>
                     </div>
@@ -54,6 +55,7 @@ function Posts({ Start }) {
 }
 
 export function PaginatedItems({ postsPerPage }) {
+  const router = useRouter()
   const [postsOffset, setPostsOffset] = useState(0);
   const endOffset = postsOffset + postsPerPage;
   console.log(`Loading items from ${postsOffset} to ${endOffset}`);
@@ -83,13 +85,16 @@ export function PaginatedItems({ postsPerPage }) {
       <div className="flex flex-row max-w-6xl mx-auto justify-center content-center text-center">
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=">"
         onPageChange={handlePageClick}
-        pageRangeDisplayed={2}
+        pageRangeDisplayed={5}
+        marginPagesDisplayed={3}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="<"
         renderOnZeroPageCount={null}
+        activeLinkClassName="text-a2imgreen"
         className="mx-auto flex flex-row gap-3 py-20 text-lg font-bold uppercase active:text-a2imgreen"
+        onClick={() => router.forward()}
       />
       </div>
     </div>
