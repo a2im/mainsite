@@ -94,7 +94,6 @@ export function PaginatedItems({ postsPerPage }) {
         renderOnZeroPageCount={null}
         activeLinkClassName="text-a2imgreen"
         className="mx-auto flex flex-row gap-3 py-20 text-lg font-bold uppercase active:text-a2imgreen"
-        onClick={() => router.forward()}
       />
       </div>
     </div>
