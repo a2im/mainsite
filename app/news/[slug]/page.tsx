@@ -8,7 +8,7 @@ export default async function MyPost({params,}: { params: {
   slug : String,
  }}) {
 
-const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${params.slug}`);
+const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${params.slug}`, { next: { revalidate: 60 }});
 const posts: PostRelationResponseCollection = await res.json()
 
   return <div className="pt-16 bg-neutral-50 pb-20">
@@ -43,20 +43,4 @@ const posts: PostRelationResponseCollection = await res.json()
   )}
         </div>
     </div>
-}
-
-export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?filters[app][Name][$eq]=Mainsite&publicationState=live&populate=*&sort=Date%3Adesc&pagination[pageSize]=25&pagination[page]=1`);
-  const data: PostEntityResponseCollection = await res.json();
-  return data?.data?.map((data) => ({
-    slug: data.attributes.slug,
-    id: data.id,
-    Title: data.attributes.Title,
-    url: data.attributes.coverImage.data.attributes.url,
-    height: data.attributes.coverImage.data.attributes.height,
-    width: data.attributes.coverImage.data.attributes.width,
-    alternativeText: data.attributes.coverImage.data.attributes.alternativeText,
-    Excerpt: data.attributes.Excerpt,
-    Body: data.attributes.Body,
-  }))
 }
