@@ -18,9 +18,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
         <MyHead/>
-      </head>
       <body className="min-h-screen z-0 bg-neutral-50 mx-auto">
         <Providers>
           <main className="mx-auto">

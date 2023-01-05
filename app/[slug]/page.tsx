@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PostRelationResponseCollection } from "../../../lib/gql/types";
+import { PostRelationResponseCollection } from "../../lib/gql/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -13,13 +13,13 @@ const posts: PostRelationResponseCollection = await res.json()
 
   return <div className="pt-16 bg-neutral-50 pb-20">
     <div className="max-w-5xl mx-auto text-4xl ">
-<Link href="/news">
-    <FontAwesomeIcon icon="arrow-left-long" className="ml-16 hover:scale-105"/>
+<Link href={"/news"}>
+    <FontAwesomeIcon icon="arrow-left" className="ml-16 hover:scale-105"/>
 </Link>
 </div>
-  <div className="mx-auto Borderswap5 max-w-5xl p-10 gap-5 mb-20">
+  <div className="mx-auto a2im-border-wrap1 max-w-5xl p-10 gap-5 mb-20 shadow-4xl">
   {posts?.data.map(posts => (
-            <div key={posts.id} className="mx-auto p-20 LiberaBorder2 bg-white text-black">
+            <div key={posts.id} className="mx-auto p-20 bg-white text-black">
              <div className="flex flex-row justify-content-evenly">
               <Link href={`/news/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
               <div className="relative w-[300px] h-[250px]">

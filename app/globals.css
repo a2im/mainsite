@@ -7,6 +7,7 @@
   background: linear-gradient(-129deg, #ff1827, #004bd9, #971ea5,#ff8e00, #55e2a6);
   padding: 0.5px;
   background-size: 300% 300%;
+  animation: gradient 18s ease infinite;
 }
 .a2im-border-wrap2 {
   max-width: 250px;
@@ -15,6 +16,7 @@
   background: linear-gradient(-12deg, #55e2a6, #ff8e00,#004bd9, #971ea5,#ff1827 );
   padding: 0.5px;
   background-size: 300% 300%;
+  animation: gradient 18s ease infinite;
 }
 .a2im-border-wrap3 {
   max-width: 250px;
@@ -23,6 +25,7 @@
   background: linear-gradient(129deg, #971ea5,#ff1827, #004bd9,#ff8e00, #55e2a6);
   padding: 0.5px;
   background-size: 300% 300%;
+  animation: gradient 18s ease infinite;
 }
 .a2im-border-wrap4 {
   max-width: 250px;
@@ -31,6 +34,7 @@
   background: linear-gradient(-112deg, #ff1827, #971ea5,#ff8e00, #55e2a6,#004bd9);
   padding: 0.5px;
   background-size: 300% 300%;
+  animation: gradient 18s ease infinite;
 }
 
 .bggradient {
