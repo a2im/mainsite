@@ -50,8 +50,8 @@ query getLiberaAds($isActive: Boolean, $Name: String!) {
 `;
 
 export const GET_ALL_POSTS = gql`
-query AllPosts($PublicationState: PublicationState, $Name: String!, $Start: Int! ){
-  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, pagination: { start: $Start, limit: 20}, sort: "id:DESC"){
+query AllPosts($PublicationState: PublicationState, $Name: String!, $Start: Int!, $Limit: Int! ){
+  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, pagination: { start: $Start, limit: $Limit}, sort: "id:DESC"){
     data {
       id
       attributes {

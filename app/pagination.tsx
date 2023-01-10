@@ -1,5 +1,5 @@
 'use client';
-import { GET_ALL_POSTS, GET_TOTAL_POSTS } from "../../lib/gql/queries";
+import { GET_ALL_POSTS, GET_TOTAL_POSTS } from "../lib/gql/queries";
 import { useQuery } from '@apollo/client';
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
@@ -8,21 +8,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { Router } from "next/router";
 
-function Posts({ Start }) {
+export function Posts({ Start, Limit }) {
   const router = useRouter()
   const { loading, error, data } = useQuery(GET_ALL_POSTS, { 
     variables: {
       PublicationState: "LIVE",
       Name: "Mainsite",
       Start,
+      Limit,
     }});
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
   return (
     <div className="grid grid-cols-1 max-w-6xl mx-auto gap-10">
        {data.posts.data.map(posts => (
-                <div key={posts.id} className="flex flex-row my-auto p-2 hover:scale-[1.01] max-w-[768px] shadow-2xl max-h-96 items-centercontent-center gap-3 a2im-border-wrap1 bg-white rounded-sm">
-                  <div className="relative bg-white mx-auto w-1/4 h-[120px] overflow-hidden">
+                <div key={posts.id} className="flex flex-row my-auto p-1 hover:scale-[1.01] max-w-[768px] shadow-2xl max-h-96 items-centercontent-center gap-3 a2im-border-wrap1 bg-white rounded-sm">
+                  <div className="relative mx-auto w-1/4 h-[120px] overflow-hidden">
                   <Image 
                     src={posts.attributes.coverImage.data.attributes.url}
                     fill
@@ -81,7 +82,7 @@ export function PaginatedItems({ postsPerPage }) {
 
   return (
     <div id="container" >
-      <Posts Start={postsOffset} />
+      <Posts Start={postsOffset} Limit={20}/>
       <div className="flex flex-row max-w-6xl mx-auto justify-center content-center text-center">
       <ReactPaginate
         breakLabel="..."

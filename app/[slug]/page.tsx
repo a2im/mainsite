@@ -17,11 +17,11 @@ const posts: PostRelationResponseCollection = await res.json()
     <FontAwesomeIcon icon="arrow-left" className="ml-10 hover:scale-105 pb-5"/>
 </Link>
 </div>
-  <div className="mx-auto a2im-border-wrap1 max-w-5xl p-10 gap-5 mb-20 shadow-4xl">
+  <div className="mx-auto a2im-border-wrap1 max-w-5xl p-3 gap-5 mb-20 shadow-4xl rounded-sm">
   {posts?.data.map(posts => (
             <div key={posts.id} className="mx-auto bg-neutral-50 text-black dark:bg-neutral-800 dark:text-white">
              <div className="flex flex-row justify-content-evenly">
-              <Link href={`/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
+              <Link href={`/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-5 hover:scale-105">{posts.attributes?.Title}</h3></Link>
               <div className="relative w-[300px] h-[250px]">
               <Image 
                 src={posts.attributes?.coverImage?.data?.attributes?.url}
