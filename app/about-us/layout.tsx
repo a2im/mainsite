@@ -1,5 +1,4 @@
 import MyNavbar from '../navbar';
-import Image from 'next/image';
 import Sidebar from '../sidebar';
 import Leaderboard from '../leaderboard';
 

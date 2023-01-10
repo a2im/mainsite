@@ -13,7 +13,6 @@ export default function Events() {
   <div className="bg-neutral-900 text-white">
   </div>
   <LargeJoinButtonSegmentLight/>
-          <Footer/>
     </>
   )
 }

@@ -9,7 +9,6 @@ export default function MentorProgram() {
   A2IM Mentor Program
   </h2>
   </div>
-          <Footer/>
     </div>
   )
 }

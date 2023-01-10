@@ -15,7 +15,6 @@ export default function A2IMInitiatives() {
           <InitiativeCard/>
           </div>
           <LargeJoinButtonSegmentLight/>
-          <Footer/>
     </div>
   )
 }

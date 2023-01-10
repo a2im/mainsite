@@ -9,7 +9,6 @@ export default function Indiescussion() {
   A2IM Indiescussion
   </h2>
   </div>
-          <Footer/>
     </div>
   )
 }

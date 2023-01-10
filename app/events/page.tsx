@@ -6,16 +6,15 @@ export default function Events() {
   return (
     <>
           <title>A2IM - Events</title>
-          <div className="grow shrink content-center">
+          <div className="grow shrink content-center bg-white">
 <h2 className="pt-20 pb-10 grow font-bold align-middle text-center leading-tight">
-  Events
+  A2IM Events
   </h2>
   </div>
   <div className="bg-neutral-900 text-white">
   <EventsCard/>
   </div>
   <LargeJoinButtonSegmentLight/>
-          <Footer/>
     </>
   )
 }
