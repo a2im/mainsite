@@ -12,9 +12,9 @@ export function LabelBenefits () {
     return (
 
 <div className="max-w-4xl mx-auto bg-neutral-900 text-white px-8">
-    <h3 className="pt-5">Label Membership</h3>
-        <hr className="border-a2imblue my-5"></hr>
-            <p>
+    <h3 className="pt-5 text-lg">Label Membership</h3>
+        <hr className="a2im-border-wrap1 border-transparent mr-0"></hr>
+            <p className="pt-3">
             A2IM is an organization dedicated to the interests of copyright holders. 
             Together, we fight for equitable treatment in commerce, media, 
             regulation, and airtime. By joining A2IM, you are given the opportunity 
@@ -243,9 +243,9 @@ export function AssociateBenefits () {
     return (
 
 <div className="max-w-4xl mx-auto bg-neutral-900 text-white px-8">
-                      <h3 className="pt-5">Associate Membership</h3>
-                      <hr className="border-a2imblue my-5"></hr>
-              <p>
+    <h3 className="pt-5 text-lg">Associate Membership</h3>
+        <hr className="a2im-border-wrap1 border-transparent mr-0"></hr>
+            <p className="pt-3">
                 A2IM’s Associate Member Program is designed for companies 
                 to have a portal to the American Independent label community. 
                 These members comprise of service or solution providers

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function JoinButtonSegment () {
     return (
-        <div className="py-20 bg-neutral-900 text-white">
+        <div className="p-5 bg-neutral-900 text-white">
         <div className="flex mx-auto justify-center gap-3">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
         </div>
@@ -13,9 +13,9 @@ export function JoinButtonSegment () {
 
 export function LargeJoinButtonSegmentDark () {
     return (
-        <div className="py-10 bg-neutral-900 text-white mx-auto">
+        <div className="p-5 bg-neutral-900 text-white mx-auto">
         <div className="max-w-4xl mx-auto">
-            <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
+            <h3 className="text-center text-xl">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
             <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
         <ButtonExternal href='https://membership.a2im.org/memberdirectory/FindStartsWith?term=%23%21'>COMMUNITY</ButtonExternal>
@@ -26,9 +26,9 @@ export function LargeJoinButtonSegmentDark () {
 
 export function LargeJoinButtonSegmentLight () {
     return (
-        <div className="py-10 bg-stone-50 text-black mx-auto">
+        <div className="p-5 bg-stone-50 text-black mx-auto">
         <div className="max-w-4xl mx-auto">
-            <h3 className="text-center">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
+            <h3 className="text-center text-xl">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">
         <ButtonExternal href='https://membership.a2im.org/member-application'>JOIN NOW</ButtonExternal>
         <ButtonExternal href='https://membership.a2im.org/memberdirectory/FindStartsWith?term=%23%21'>COMMUNITY</ButtonExternal>
