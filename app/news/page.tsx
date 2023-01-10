@@ -6,7 +6,7 @@ export default function News() {
     <div>
           <title>A2IM - NEWS</title>
           <div className="relative grow shrink content-center">
-<h2 className="py-10 grow font-bold align-middle text-center leading-tight">
+<h2 className="py-10 grow font-bold align-middle text-center leading-tight dark:text-white">
   NEWS
   </h2>
   </div>

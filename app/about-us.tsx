@@ -7,7 +7,7 @@ function About1 () {
     return (
       <div className="mx-auto p-5 pt-10">
           <div className="flex flex-col max-w-4xl mx-auto px-8">
-          <h2 className="text-2xl"> ABOUT A2IM</h2>
+          <h2 className="text-2xl dark:text-white"> ABOUT A2IM</h2>
           <hr className="a2im-border-wrap2 border-transparent"></hr>
             <div className="pt-3 z-10 flex flex-col md:flex-row items-center md:justify-around mx-auto gap-10">
               <div className="flex-initial relative items-center max-w-sm">

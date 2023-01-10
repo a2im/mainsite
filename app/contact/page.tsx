@@ -7,7 +7,7 @@ export default function Contact() {
     <div>
       <title>A2IM - Contact Us</title>
       <div className="grow shrink content-center">
-        <h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
+        <h2 className="pt-20 grow font-bold align-middle text-center leading-tight dark:text-white">
           Contact
           </h2>
       </div>

@@ -93,7 +93,7 @@ export function PaginatedItems({ postsPerPage }) {
         previousLabel="<"
         renderOnZeroPageCount={null}
         activeLinkClassName="text-a2imgreen"
-        className="mx-auto flex flex-row gap-3 py-20 text-lg font-bold uppercase active:text-a2imgreen"
+        className="mx-auto flex flex-row gap-3 py-20 text-lg font-bold uppercase dark:text-white active:text-a2imgreen"
       />
       </div>
     </div>
