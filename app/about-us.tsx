@@ -5,19 +5,19 @@ import { MissionStatement, IndieStatement, PolicyStatement } from "./segments";
 
 function About1 () {
     return (
-      <div className="pt-20 md:pt-0 mx-auto">
+      <div className="pt-10 md:pt-0 mx-auto">
           <div className="max-w-6xl mx-auto px-5">
             <div className="z-10 flex flex-col md:flex-row items-center md:justify-around mx-auto gap-10">
-              <div className="flex-initial relative md:py-20 items-center max-w-xl">
-                <h2> ABOUT A2IM</h2>
+              <div className="flex-initial relative md:py-20 items-center max-w-sm">
+                <h2 className="text-2xl"> ABOUT A2IM</h2>
                 <hr className="border-a2impurple my-5"></hr>
-                <h4>The American Association of Independent Music (A2IM) is a 501(c)(6)
+                <p>The American Association of Independent Music (A2IM) is a 501(c)(6)
                    not-for-profit trade organization that serves as a central voice 
                    for a diverse community of over 600 independently owned record labels 
                    operating within the United States. A2IM  represents their interests 
                    in the marketplace, in the media, on Capitol Hill, and as part of the 
                    global music community.
-                </h4>
+                </p>
               <ButtonInternal href='/about-us/join-a2im'>JOIN NOW</ButtonInternal>
               </div>
               <div className="relative w-96 h-96 m-10">
