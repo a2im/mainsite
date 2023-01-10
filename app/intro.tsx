@@ -6,7 +6,7 @@ export default function Intro() {
     <>
 
        
-  <div className="justify-center bg-neutral-900 mx-auto">
+  <div className="justify-center mx-auto">
         <ButtonInternal href="/about-us">LEARN MORE</ButtonInternal>
         </div>
 </>

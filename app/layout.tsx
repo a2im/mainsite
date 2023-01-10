@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
         <MyHead/>
-      <body className="min-h-screen z-0 light:bg-neutral-50 dark:bg-neutral-600 dark:text-white mx-auto">
+      <body className="min-h-screen z-0 bg-neutral-50 text-black dark:bg-neutral-600 dark:text-white mx-auto">
         <Providers>
           <main className="mx-auto">
             {children}

@@ -35,7 +35,7 @@ export function Posts({ Start, Limit }) {
                     33vw"
                     />
                     </div>
-                    <div className="w-3/4 content-center items-center bg-white dark:bg-neutral-800 dark:text-white p-2 ">
+                    <div className="w-3/4 content-center items-center text-black bg-neutral-50 dark:bg-neutral-800 dark:text-white p-2 ">
                       <div className="max-h-[140px] ">
                         <Link href={`/${posts.attributes.slug}`} 
                           onClick={() => router.push(`/${posts.attributes.slug}`)}>
