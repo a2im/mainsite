@@ -18,11 +18,11 @@ export function PostsList({currentPage}) {
     if (error) return <p>Error</p>
     return (
       <div className="mb-20">
-      <div className="relative grid grid-cols-0 md:grid-cols-4 mx-auto p-10 gap-10 z-0 max-w-6xl">
+      <div className="relative grid grid-cols-1 mx-auto p-10 gap-10 z-0 max-w-6xl">
        {/* Map through the data */}
        {data.posts.data.map(posts => (
                 <div key={posts.id} className="mx-auto p-2 hover:scale-105 shadow-2xl w-64 max-h-96">
-                  <div className="relative LiberaBorder2 bg-white mx-auto h-[100] overflow-hidden">
+                  <div className="relative bg-white mx-auto h-[100] overflow-hidden">
                   <Image 
                     src={posts.attributes.coverImage.data.attributes.url}
                     fill

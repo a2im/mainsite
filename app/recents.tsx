@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function RecentJobs(){
     return (
-        <div className="bg-stone-900 text-white w-full p-2 rounded-sm hover:scale-[1.01]">
+        <div className="bg-neutral-900 text-white w-full p-2 rounded-sm hover:scale-[1.01] max-w-[250px]">
             <h4 className="uppercase text-lg">Recent Jobs</h4>
             <hr className="a2im-border-wrap1 border-transparent mx-auto"></hr>
             <ul className="p-2 ">
@@ -108,7 +108,7 @@ export function RecentJobs(){
 
 export function RecentNews(){
     return (
-        <div className="bg-stone-900 text-white w-full p-2 rounded-sm hover:scale-[1.01]">
+        <div className="bg-neutral-900 text-white w-full p-2 rounded-sm hover:scale-[1.01] max-w-[250px]">
             <h4 className="uppercase text-lg">Recent News</h4>
             <hr className="a2im-border-wrap1 border-transparent mx-auto"></hr>
             <ul className="p-2 ">

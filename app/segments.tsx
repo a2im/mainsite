@@ -26,7 +26,7 @@ export function LargeJoinButtonSegmentDark () {
 
 export function LargeJoinButtonSegmentLight () {
     return (
-        <div className="p-5 bg-stone-50 text-black mx-auto">
+        <div className="p-5 bg-stone-50 dark:bg-stone-800 dark:text-white text-black mx-auto">
         <div className="max-w-4xl mx-auto">
             <h3 className="text-center text-xl">ARE YOU READY TO JOIN OUR COMMUNITY?</h3>
         <div className="grid grid-cols-0 md:grid-cols-2 mx-auto justify-center">

@@ -19,10 +19,10 @@ function Posts({ Start }) {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
   return (
-    <div className="grid grid-cols-0 md:grid-cols-4 max-w-6xl mx-auto gap-10">
+    <div className="grid grid-cols-1 max-w-6xl mx-auto gap-10">
        {data.posts.data.map(posts => (
-                <div key={posts.id} className="mx-auto p-2 hover:scale-105 shadow-2xl w-64 max-h-96">
-                  <div className="relative bg-white mx-auto h-[140] overflow-hidden">
+                <div key={posts.id} className="flex flex-row my-auto p-2 hover:scale-[1.01] max-w-[768px] shadow-2xl max-h-96 items-centercontent-center gap-3 a2im-border-wrap1 bg-white rounded-sm">
+                  <div className="relative bg-white mx-auto w-1/4 h-[120px] overflow-hidden">
                   <Image 
                     src={posts.attributes.coverImage.data.attributes.url}
                     fill
@@ -34,18 +34,18 @@ function Posts({ Start }) {
                     33vw"
                     />
                     </div>
-                    <div className="">
-                      <div className="max-h-[140px]">
-                    <Link href={`/${posts.attributes.slug}`} 
-                    onClick={() => router.push(`/${posts.attributes.slug}`)}>
-                      <h3 className="text-sm text-ellipsis ...">{posts.attributes?.Title}</h3>
-                    </Link>
-                    </div>
-                    <div className="static h-[100px] overflow-hidden">
-                    <p className="text-ellipsis whitespace-normal shadow-xl ...">
-                    {posts.attributes?.Excerpt}
-                    </p>
-                    </div>
+                    <div className="w-3/4 content-center items-center bg-white dark:bg-neutral-800 dark:text-white p-2 ">
+                      <div className="max-h-[140px] ">
+                        <Link href={`/${posts.attributes.slug}`} 
+                          onClick={() => router.push(`/${posts.attributes.slug}`)}>
+                            <h3 className="text-sm text-ellipsis  ...">{posts.attributes?.Title}</h3>
+                         </Link>
+                      </div>
+                      <div className=" overflow-hidden">
+                        <p className="text-ellipsis whitespace-normal ...">
+                          {posts.attributes?.Excerpt}
+                        </p>
+                      </div>
                     </div>
                 </div>
               )
