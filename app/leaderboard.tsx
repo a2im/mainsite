@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Leaderboard(){
     return (
-        <div className="invisible md:visible mx-auto relative shadow-2xl bg-white max-w-5xl mb-5">
+        <div className="p-5 md:p-0 mx-auto relative md:shadow-xl max-w-5xl mb-5">
               <Image src="/images/ads/ads_A2IM_Leaderboard_1024x300.png" 
               height={300}
               width={1024}

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { RecentJobs } from "./recents"
+import { RecentJobs, RecentNews } from "./recents"
 
 export default function Sidebar(){
     return (
@@ -57,6 +57,16 @@ export default function Sidebar(){
               (max-width: 1200px) 50vw,
               33vw"
               alt="a2im half banner ad"
+              className="shadow-2xl hover:scale-[1.01]"
+               />
+               <RecentNews/>
+               <Image src="/images/ads/ads_A2IM_Fat Skyscraper_240x400.png" 
+              height={400}
+              width={240}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+              alt="a2im skyscraper ad"
               className="shadow-2xl hover:scale-[1.01]"
                />
             </div>

@@ -39,7 +39,7 @@ export function LargeJoinButtonSegmentLight () {
 
 export function MissionStatement () {
     return (
-            <div className="relative py-20 bg-neutral-900 text-white">
+            <div className="relative p-10 bg-neutral-900 text-white">
             <div className="flex flex-col mx-auto justify-center">
                 <div className="flex flex-row mx-auto">
                     <div className="relative w-12 h-12 hover:scale-105 invisible md:visible">
@@ -55,8 +55,8 @@ export function MissionStatement () {
                     </div>
             <h2 className="text-center pb-5">MISSION STATEMENT:</h2>
             </div>
-            <h4 className="mx-auto text-center pb-10 max-w-5xl">
-            A2IM Is The Collective Voice Of Independent Music. 
+            <h4 className="mx-auto text-center max-w-5xl">
+            A2IM Is The Collective Voice Of Independent Music. <br></br>
             Our Mission Is To Promote Growth, Awareness, 
             And Opportunities For Independent Music Through 
             Advocacy, Education And Community.
@@ -67,15 +67,15 @@ export function MissionStatement () {
     
 export function IndieStatement () {
     return ( 
-        <div className="py-20 bg-neutral-900 text-white">
-        <h4 className="mx-auto text-center pb-10 max-w-5xl">“Independent” doesn’t refer to a specific genre of music, nor does it mean lesser-known artists: A2IM member labels have issued music releases by artists including Taylor Swift, Mumford & Sons, The Lumineers, Adele, Alabama Shakes, Arcade Fire, Run the Jewels, Bon Iver, and many others.</h4>
+        <div className="p-10 bg-neutral-900 text-white">
+        <h4 className="mx-auto text-center pb-10 max-w-5xl text-lg">“Independent” doesn’t refer to a specific genre of music, nor does it mean lesser-known artists: A2IM member labels have issued music releases by artists including Taylor Swift, Mumford & Sons, The Lumineers, Adele, Alabama Shakes, Arcade Fire, Run the Jewels, Bon Iver, and many others.</h4>
         </div>
         )}
 
 export function PolicyStatement () {
     return ( 
-    <div className="py-20 bg-neutral-900 text-white">
-        <h4 className="mx-auto text-center pb-10 max-w-5xl">
+    <div className="p-10 bg-neutral-900 text-white">
+        <h4 className="mx-auto text-center pb-5 max-w-5xl text-lg">
             As an organization, A2IM is committed to protecting 
             the value of independent musical contributions and 
             influence on a policy level.</h4>
