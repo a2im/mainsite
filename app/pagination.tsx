@@ -6,7 +6,53 @@ import ReactPaginate from 'react-paginate';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Router } from "next/router";
+import Loading from "./loading";
+
+
+export function PaginatedItems({ postsPerPage }) {
+  const router = useRouter()
+  const [postsOffset, setPostsOffset] = useState(0);
+  const endOffset = postsOffset + postsPerPage;
+  console.log(`Loading items from ${postsOffset} to ${endOffset}`);
+  const { loading, error, data } = useQuery(GET_TOTAL_POSTS, { 
+    variables: {
+      PublicationState: "LIVE",
+      Name: "Mainsite",
+      postsOffset,
+    }});
+    if (loading) return <div>...</div>
+    if (error) return <p>Error</p>
+  const pageCount = data.posts.meta.pagination.pageCount;
+
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newPage = event.selected * postsPerPage;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newPage}`
+    );
+    setPostsOffset(newPage);
+  };
+
+  return (
+    <div id="container" >
+      <Posts Start={postsOffset} Limit={20}/>
+      <div className="flex flex-row max-w-6xl mx-auto justify-center content-center text-center">
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel=">"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        marginPagesDisplayed={3}
+        pageCount={pageCount}
+        previousLabel="<"
+        renderOnZeroPageCount={null}
+        activeLinkClassName="text-a2imgreen"
+        className="mx-auto flex flex-row gap-3 py-20 text-lg font-bold uppercase dark:text-white active:text-a2imgreen"
+      />
+      </div>
+    </div>
+  );
+}
 
 export function Posts({ Start, Limit }) {
   const router = useRouter()
@@ -17,7 +63,8 @@ export function Posts({ Start, Limit }) {
       Start,
       Limit,
     }});
-    if (loading) return <p>Loading...</p>
+    if (loading) return <Loading start={Start} end={Limit}/>
+    
     if (error) return <p>Error</p>
   return (
     <div className="grid grid-cols-1 max-w-6xl mx-auto gap-10">
@@ -54,50 +101,3 @@ export function Posts({ Start, Limit }) {
     </div>
   );
 }
-
-export function PaginatedItems({ postsPerPage }) {
-  const router = useRouter()
-  const [postsOffset, setPostsOffset] = useState(0);
-  const endOffset = postsOffset + postsPerPage;
-  console.log(`Loading items from ${postsOffset} to ${endOffset}`);
-  const { loading, error, data } = useQuery(GET_TOTAL_POSTS, { 
-    variables: {
-      PublicationState: "LIVE",
-      Name: "Mainsite",
-      postsOffset,
-    }});
-    
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error</p>
-  const pageCount = data.posts.meta.pagination.pageCount;
-
-  // Invoke when user click to request another page.
-  const handlePageClick = (event) => {
-    const newPage = event.selected * postsPerPage;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newPage}`
-    );
-    setPostsOffset(newPage);
-  };
-
-  return (
-    <div id="container" >
-      <Posts Start={postsOffset} Limit={20}/>
-      <div className="flex flex-row max-w-6xl mx-auto justify-center content-center text-center">
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel=">"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        marginPagesDisplayed={3}
-        pageCount={pageCount}
-        previousLabel="<"
-        renderOnZeroPageCount={null}
-        activeLinkClassName="text-a2imgreen"
-        className="mx-auto flex flex-row gap-3 py-20 text-lg font-bold uppercase dark:text-white active:text-a2imgreen"
-      />
-      </div>
-    </div>
-  );
-}
-

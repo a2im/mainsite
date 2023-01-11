@@ -4,6 +4,7 @@ import { GET_ALL_POSTS } from "../../lib/gql/queries";
 import { useQuery } from '@apollo/client';
 import Link from "next/link";
 import Image from "next/image";
+import Loading from "./loading";
 
 
 export function PostsList({currentPage}) {
@@ -14,11 +15,11 @@ export function PostsList({currentPage}) {
       Name: "Mainsite",
       Page: {currentPage}
     }});
-    if (loading) return <p>Loading...</p>
+    if (loading) return (<Loading start={0} end={20}/>);
     if (error) return <p>Error</p>
     return (
       <div className="mb-20">
-      <div className="relative grid grid-cols-1 mx-auto p-10 gap-10 z-0 max-w-6xl">
+      <div className="relative animate-pulse grid grid-cols-1 mx-auto p-10 gap-10 z-0 max-w-6xl">
        {/* Map through the data */}
        {data.posts.data.map(posts => (
                 <div key={posts.id} className="mx-auto p-2 hover:scale-105 shadow-2xl w-64 max-h-96">

@@ -1,5 +1,6 @@
 import { PaginatedItems } from '../pagination'
-import Footer from '../footer'
+import Loading from './loading'
+import { Suspense } from 'react'
 
 export default function News() {
   return (
@@ -11,7 +12,9 @@ export default function News() {
   </h2>
   </div>
       <div id='container'>
+        <Suspense fallback={<Loading start={0} end={20}/>}>
           <PaginatedItems postsPerPage={20} />
+          </Suspense>
           </div>
     </div>
   )
