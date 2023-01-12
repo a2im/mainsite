@@ -27,10 +27,9 @@ export default function RootLayout({
       <div className="py-8"></div>
       <Leaderboard/>
       <div className="flex flex-col-0 md:flex-col-2 mx-auto max-w-5xl gap-4">
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-5xl">
             {children}
             </div>
-            <Sidebar/>
       </div>
     </>
   )
