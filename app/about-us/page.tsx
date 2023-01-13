@@ -1,5 +1,4 @@
 import AboutUS from '../about-us'
-import Board from '../board'
 import A2IMStaff from '../staff'
 import Footer from '../footer'
 
