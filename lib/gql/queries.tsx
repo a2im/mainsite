@@ -24,6 +24,33 @@ query getSponsorsList($Level: String!, $Title: String!) {
   }
   `; 
 
+export const GET_ALL_STAFF = gql`
+query getStaffsList($Relation: String!) {
+    staffs(filters: { Relation: { eq: $Relation }}, publicationState: LIVE, sort: "Name:Asc") {
+      data {
+        id
+        attributes {
+          Name
+          Title
+          Business
+          Headshot {
+            data {
+              id
+              attributes {
+                alternativeText
+                url
+                width
+                height
+              }
+            }
+          }
+          Relation
+        }
+      }
+    }
+  }
+  `; 
+
 export const GET_ALL_ADS = gql`
 query getLiberaAds($isActive: Boolean, $Name: String!) {
   ads(filters: { isActive: { eq: $isActive }, apps: { Name: {eq: $Name}}}) {

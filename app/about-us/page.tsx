@@ -1,6 +1,6 @@
 import AboutUS from '../about-us'
 import Board from '../board'
-import Staff from '../staff'
+import A2IMStaff from '../staff'
 import Footer from '../footer'
 
 
@@ -9,8 +9,7 @@ export default function About() {
     <div className="mx-auto justify-center">
           <title>A2IM - About Us</title>
           <AboutUS/>
-          <Board/>
-          <Staff/>
+          <A2IMStaff/>
           <Footer />
     </div>
   )
