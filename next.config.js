@@ -14,37 +14,11 @@ module.exports = {
       '1.gravatar.com',
       '2.gravatar.com',
       'secure.gravatar.com',
-      'images.liberaawards.com',
-      'liberaawards.com',
-      'liberaawards.a2im.xyz',
       'a2im-strapi-cms-images.s3.amazonaws.com',
-      'a2im.org'
+      'a2im.org',
+      'images.a2im.org'
     ],
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'liberaawards.com',
-        port: '80',
-        pathname: '/wp-content/uploads/***',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.liberaawards.com',
-        port: '80',
-        pathname: '/wp-content/uploads/***',
-      },
-      {
-        protocol: 'https',
-        hostname: 'liberaawards.com',
-        port: '80',
-        pathname: '/wp-content/uploads/***',
-      },
-      {
-        protocol: 'https',
-        hostname: 'liberaawards.a2im.xyz',
-        port: '80',
-        pathname: '/wp-content/uploads/***',
-      },
       {
         protocol: 'https',
         hostname: 'a2im-strapi-cms-images.s3.amazonaws.com',
@@ -54,6 +28,18 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'a2im.org',
+        port: '80',
+        pathname: '/***',
+      },
+      {
+        protocol: 'https',
+        hostname: 'a2im.org',
+        port: '80',
+        pathname: '/wp-content/uploads/***',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.a2im.org',
         port: '80',
         pathname: '/***',
       }
