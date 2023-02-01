@@ -16,7 +16,8 @@ module.exports = {
       'secure.gravatar.com',
       'a2im-strapi-cms-images.s3.amazonaws.com',
       'a2im.org',
-      'images.a2im.org'
+      'images.a2im.org',
+      'a2im.xyz',
     ],
     remotePatterns: [
       {
@@ -42,7 +43,13 @@ module.exports = {
         hostname: 'images.a2im.org',
         port: '80',
         pathname: '/***',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'a2im.xyz',
+        port: '80',
+        pathname: '/***',
+      },
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; sandbox;",
