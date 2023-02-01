@@ -9,7 +9,6 @@ export default function About() {
           <title>A2IM - About Us</title>
           <AboutUS/>
           <A2IMStaff/>
-          <Footer />
     </div>
   )
 }

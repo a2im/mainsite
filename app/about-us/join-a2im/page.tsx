@@ -11,7 +11,6 @@ OUR METEORIC MARKET-SHARE GROWTH IS A TRUE TESTAMENT TO THE INDEPENDENT SPIRIT.
   </h3>
   </div>
 <JoinUS/>
-          <Footer/>
     </div>
   )
 }
