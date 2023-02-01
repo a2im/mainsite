@@ -1,4 +1,5 @@
 import MyHead from './head';
+import App from './App';
 import './globals.css'
 import MyModal from "./modal"
 import Footer from './footer';
@@ -21,9 +22,7 @@ export default function RootLayout({
         <MyHead/>
       <body className="min-h-screen z-0 bg-neutral-50 text-black dark:bg-neutral-600 dark:text-white mx-auto">
         <Providers>
-          <main className="mx-auto">
-            {children}
-          </main>          
+          <App>{children}</App>          
           <Footer/>
           <MyModal/>
         </Providers>

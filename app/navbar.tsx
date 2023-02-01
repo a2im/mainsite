@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import Image from "next/image";
 
-export default function MyNavbar() {
+export default function MyNavbar({signOut}) {
   const ref = useRef();
   const [navbar, setNavbar] = useState(false);
   useOnClickOutside(ref, () => setNavbar(false));
@@ -388,12 +388,8 @@ export default function MyNavbar() {
                   </ul>
                 </li>
                 <hr className="md:hidden a2im-border-wrap4 border-transparent mx-auto"></hr>
-                <li 
-                  className="py-2 md:py-0 text-white text-l uppercase px-2 hover:scale-105 text-center
-                  md:text-left">
-                  <Link href="/" onClick={() => setNavbar(false)}>
-                    LOG IN
-                  </Link>
+                <li className="px-3 hover:scale-105">
+                  <button className="a2im-border-wrap2 text-white font-bold rounded-sm px-2" onClick={signOut}>Sign out</button>
                 </li>
               </ul>
             </div>

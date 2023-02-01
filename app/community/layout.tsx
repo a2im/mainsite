@@ -1,8 +1,7 @@
-import MyNavbar from '../navbar';
 import Sidebar from '../sidebar';
 import Leaderboard from '../leaderboard';
 
-export default function RootLayout({
+export default function CommunityLayout({
   children,
 }: {
   children: React.ReactNode
@@ -10,7 +9,6 @@ export default function RootLayout({
 
   return (
     <>
-      <MyNavbar/>
       <div className="py-8"></div>
       <Leaderboard/>
       <div className="flex flex-col-0 md:flex-col-2 mx-auto max-w-5xl gap-4">

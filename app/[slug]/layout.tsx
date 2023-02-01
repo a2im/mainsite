@@ -1,4 +1,3 @@
-import MyNavbar from '../navbar';
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -15,7 +14,7 @@ export const dynamic = 'force-dynamic',
   runtime = 'nodejs',
   preferredRegion = 'auto'
 
-export default function RootLayout({
+export default function NewsLayout({
   children,
 }: {
   children: React.ReactNode
@@ -23,7 +22,6 @@ export default function RootLayout({
   
   return (
     <>
-      <MyNavbar/>
       <div className="py-8"></div>
       <Leaderboard/>
       <div className="flex flex-col-0 md:flex-col-2 mx-auto max-w-5xl gap-4">

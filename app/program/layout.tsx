@@ -1,7 +1,5 @@
-import MyNavbar from '../navbar';
 
-
-export default function RootLayout({
+export default function ProgramLayout({
   children,
 }: {
   children: React.ReactNode
@@ -9,7 +7,6 @@ export default function RootLayout({
 
   return (
     <main>
-      <MyNavbar/>
       {children}
     </main>
   )
