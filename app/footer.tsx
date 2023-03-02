@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from 'next/link'
-import React from "react";
-import { SocialFollowWhite } from "../components/SocialFollow";
+import React from 'react'
+import SocialFollow from "@/components/social-follow";
 import AdBanner from "../components/ad-banner";
 import ContactForm from "../components/contact-form";
 
@@ -24,7 +24,7 @@ export default function Footer() {
                     priority={true}/>
                 </div>
               </Link>
-              <SocialFollowWhite/>
+              <SocialFollow/>
           </div>
           <div className="text-white mx-auto justify-center">
             <ContactForm/>

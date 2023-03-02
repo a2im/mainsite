@@ -56,6 +56,12 @@ module.exports = {
         port: '80',
         pathname: '/***',
       },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
     dangerouslyAllowSVG: true,
 },

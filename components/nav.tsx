@@ -18,7 +18,6 @@ export default function MyNavbar({children}) {
   
   useOnClickOutside(Navref, handleClickOutside)
   return (
-    <div>
       <nav className="bg-neutral-900 w-full fixed z-50 shadow-2xl px-5">
         <div className="max-w-5xl justify-between mx-auto items-center md:flex">
           <div>
@@ -396,16 +395,11 @@ export default function MyNavbar({children}) {
                     </li>
                   </ul>
                 </li>
-                <hr className="md:hidden a2im-border-wrap4 border-transparent mx-auto"></hr>
-                <li className="px-3 hover:scale-105">
-                  <button className="a2im-border-wrap2 text-white font-bold rounded-sm px-2" onClick={signOut}>Sign out</button>
-                </li>
               </ul>
             </div> 
             {children}
           </div>
         </div>
       </nav>
-    </div>
   );
 }
