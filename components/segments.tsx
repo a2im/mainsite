@@ -1,4 +1,4 @@
-import { ButtonInternal, ButtonExternal } from "./button";
+import { ButtonInternal, ButtonExternal } from "../app/button";
 import Link from "next/link";
 import Image from "next/image";
 

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { RecentJobs, RecentNews } from "./recents"
+import { RecentJobs, RecentNews } from "../app/recents"
 
 export default function Sidebar(){
     return (

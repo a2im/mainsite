@@ -6,7 +6,7 @@ import ReactPaginate from 'react-paginate';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import Loading from "./loading";
+import Loading from "../app/loading";
 
 
 export function PaginatedItems({ postsPerPage }) {

@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image";
-import MemberBenefits from "./member-benefits";
-import { JoinButtonSegment, LargeJoinButtonSegmentDark  } from "./segments";
+import MemberBenefits from "../../../components/member-benefits";
+import { JoinButtonSegment, LargeJoinButtonSegmentDark  } from "../../../components/segments";
 
 function Join1 () {
     return (

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link'
 import React from "react";
-import { SocialFollowWhite } from "./SocialFollow";
-import AdBanner from "./ad-banner";
-import ContactForm from "./contact/contact-form";
+import { SocialFollowWhite } from "../components/SocialFollow";
+import AdBanner from "../components/ad-banner";
+import ContactForm from "../components/contact-form";
 
 export default function Footer() {
   return (

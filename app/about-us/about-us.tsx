@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image";
-import { ButtonInternal, ButtonExternal } from "./button";
-import { MissionStatement, IndieStatement, PolicyStatement } from "./segments";
+import { ButtonInternal, ButtonExternal } from "../button";
+import { MissionStatement, IndieStatement, PolicyStatement } from "../../components/segments";
 
 function About1 () {
     return (

@@ -6,18 +6,24 @@ module.exports = {
     WORDPRESS_API_URL: process.env.WORDPRESS_API_URL,
     NEXT_PUBLIC_A2IMCMS_API_URL: process.env.NEXT_PUBLIC_A2IMCMS_API_URL,
     NEXT_PUBLIC_A2IMCMS_API_GQL_URL: process.env.NEXT_PUBLIC_A2IMCMS_API_GQL_URL,
+    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
+    NEXT_AUTH_AWS_REGION: process.env.NEXT_AUTH_AWS_REGION,
+    NEXT_AUTH_AWS_ACCESS_KEY: process.env.NEXT_AUTH_AWS_ACCESS_KEY,
+    NEXT_AUTH_AWS_SECRET_KEY: process.env.NEXT_AUTH_AWS_SECRET_KEY,
+    NEXT_CMS_BASE_URL: process.env.NEXT_CMS_BASE_URL,
   },
   images: {
     domains: [
-      process.env.WORDPRESS_API_URL.match(/(?!(w+)\.)\w*(?:\w+\.)+\w+/)[0], // Valid WP Image domain.
-      '0.gravatar.com',
-      '1.gravatar.com',
-      '2.gravatar.com',
-      'secure.gravatar.com',
       'a2im-strapi-cms-images.s3.amazonaws.com',
       'a2im.org',
       'images.a2im.org',
       'a2im.xyz',
+      '*.googleusercontent.com'
     ],
     remotePatterns: [
       {
@@ -52,7 +58,6 @@ module.exports = {
       },
     ],
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; sandbox;",
 },
 experimental: {
   appDir: true,

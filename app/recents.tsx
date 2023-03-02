@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Posts } from "./pagination"
+import { Posts } from "../components/pagination"
 
 export function RecentJobs(){
     return (

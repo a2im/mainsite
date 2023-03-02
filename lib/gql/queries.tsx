@@ -220,3 +220,70 @@ query TotalPosts($PublicationState: PublicationState, $Name: String!, $postsOffs
     }
   }
 }`
+
+export const GET_INFO_BUTTON = gql`
+query getInfoButton($PublicationState: PublicationState, $Name: String! ) {
+    infoButtons(filters: { apps: { Name: { eq: $Name }}},publicationState: $PublicationState) {
+      data {
+        id
+        attributes {
+          Info
+        }
+      }
+    }
+  }
+  `;
+
+export const GET_ALL_FAQ = gql`
+query getLiberaFAQs($PublicationState: PublicationState, $Name: String!, $Category: String!) {
+    faqItems(filters: { apps: { Name: { eq: $Name }}, Category: { eq: $Category}},publicationState: $PublicationState, pagination: { page: 1, pageSize: 50 }) {
+      data {
+        id
+        attributes {
+          Question
+          Answer
+        }
+      }
+    }
+  }
+  `; 
+
+export const GET_ANNOUNCEMENTS = gql`
+query getAnnouncements($PublicationState: PublicationState, $Name: String!) {
+    announcements(filters: { apps: { Name: { eq: $Name }}}, publicationState: $PublicationState, pagination: { page: 1, pageSize: 50 }) {
+      data {
+        id
+        attributes {
+          text
+        }
+      }
+    }
+  }
+  `; 
+
+export const GET_KB_ARTICLES = gql`
+query getKnowledge($PublicationState: PublicationState, $MainCategory: String!, $KbName: String!) {
+  kbArticles(filters: { MainCategory: { eq: $MainCategory }, kb_categories: { Name: { eq : $KbName }} }, publicationState: $PublicationState, pagination: { page: 1, pageSize: 50 }) {
+    data {
+      id
+      attributes {
+        Title
+        Text
+      }
+    }
+  }
+}
+`; 
+
+export const GET_KB_CATEGORIES = gql`
+query getCategories($MainCategory: String!) {
+    kbCategories(filters: { MainCategory: { eq: $MainCategory }}, pagination: { page: 1, pageSize: 50 }) {
+      data {
+        id
+        attributes {
+          Name
+        }
+      }
+    }
+  }
+  `;

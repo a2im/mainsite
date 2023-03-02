@@ -4,7 +4,7 @@ import { GET_ALL_POSTS } from "../../lib/gql/queries";
 import { useQuery } from '@apollo/client';
 import Link from "next/link";
 import Image from "next/image";
-import Loading from "./loading";
+import Loading from "../loading";
 
 
 export function PostsList({currentPage}) {

@@ -1,8 +1,11 @@
-import { PaginatedItems } from '../pagination'
-import Loading from './loading'
+import { PaginatedItems } from '../../components/pagination'
+import Loading from '../loading'
 import { Suspense } from 'react'
-
-export default function News() {
+import { authOptions } from 'pages/api/auth/[...nextauth]'
+import { getServerSession } from "next-auth/next"
+export const dynamic = 'force-dynamic'
+export default async function News() {
+  const session = await getServerSession(authOptions)
   return (
     <div>
           <title>A2IM - NEWS</title>

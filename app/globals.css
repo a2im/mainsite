@@ -136,6 +136,18 @@
 }
 
 /* end accordion styles */
+:root {
+  --a2imblue: #004BD9;
+  --black: #171717;
+  --grey: #262626;
+  --white: #d4d4d4;
+  --red:#ff1827;
+  --articlebackground: var(--white);
+  --articleforeground: var(--black);
+  --background: var(--white);
+  --foreground: var(--black);
+    --transition: 0.5s ease;
+}
 
 @layer base {
   html {
@@ -143,6 +155,24 @@
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
       color: #1c1917;
+      background: var(--white);
+      transition: color var(--transition);
+    }
+    html::before {
+      content: "";
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: var(--black);
+      transform: translateX(-100%);
+      transition: transform var(--transition);
+      z-index: 0;
+    }
+    html.dark section a {
+      color: #60a5fa
+    }
+    html.dark .navigation a {
+      color: #60a5fa
     }
   h2 {
       font-family: Inter;
@@ -175,6 +205,50 @@
   .lvl1 li { display: relative; position:relative; }
   .lvl2 { position: absolute; }
   .lvl2 li { position: relative; }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  a:hover {
+    --tw-scale-x: 1.01;
+    --tw-scale-y: 1.01;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  .font-outline-2 {
+    -webkit-text-stroke: 2px black;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px black;
+  }
+  body {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+}
+a:hover {
+  --tw-scale-x: 1.01;
+  --tw-scale-y: 1.01;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media only screen and (max-width: 600px) {
+  li > ul { display: inline; }
+  li:hover > ul { display: inline; }
+  .lvl1 li { display: relative; position:relative; }
+  .lvl2 { position: absolute; }
+  .lvl2 li { position: relative; }
+  html::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @font-face {
@@ -244,11 +318,6 @@
   border-color: white;
 }
 
-.iwnavbar {
-	background: linear-gradient(-90deg, rgba(255, 24, 39, 1), #1c1917, rgba(255, 24, 39, 1));
-	background-size: 300% 300%;
-	animation: gradient 13s ease infinite;
-}
 
 @keyframes gradient {
 	0% {
@@ -405,5 +474,83 @@ a.social:hover {
   background-color: transparent;
 }
 .footer-shadow:hover {
-  background-color:#292524;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+    /* Make sure all elements are above the background */
+  z-index: 1;
+  position: relative;
+}
+
+.toggle .hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.toggle-wrapper {
+  width: 60px;
+  display: block;
+}
+
+.toggle {
+  height: 25px;
+  width: 60px;
+  background: var(--background);
+  transition: background var(--transition);
+  border-radius: 40px;
+  padding: 3px;
+  position: relative;
+  margin: auto; 
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+  background: var(--foreground);
+  transition: transform var(--transition), background var(--transition);
+  position: absolute;
+  z-index: 2;
+  transform: translate(0);
+  transition: transform var(--transition);
+}
+
+.toggle.enabled::before {
+  transform: translateX(32px);
+}
+
+.toggle input {
+    position: absolute;
+    top: 0;
+  opacity: 0;
+}
+
+.toggle .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 5px;
+}
+
+.toggle .icons svg {
+  fill: var(--background);
+  height: 15px;
+  width: 15px;
+  z-index: 0;
+}
+
+/* When the darkmode class is applied, set the pseudo element position to 0 */
+.dark::before {
+  transform: translateX(0);
 }

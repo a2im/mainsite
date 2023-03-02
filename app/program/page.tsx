@@ -1,5 +1,4 @@
-import { SocialFollowWhite } from '../SocialFollow'
-import Footer from '../footer'
+import SocialFollow from "../../components/social-follow"
 
 export default function Program() {
   return (
@@ -19,12 +18,11 @@ Program
                 <h4 className="text-center">Follow us on social media for the latest updates and subscribe
 to the Libera Awards mailing list to hear first about program availability!</h4>
               <div className="max-w-lg pt-20 mx-auto">
-              <SocialFollowWhite/>
+              <SocialFollow/>
               </div>
               </div>
               </div>
           </div>
-          <Footer/>
     </div>
   )
 }

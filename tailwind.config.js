@@ -7,7 +7,7 @@ module.exports = {
     './node_modules/tw-elements/dist/js/**/*.js'
   ],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class', // or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -16,7 +16,13 @@ module.exports = {
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
         '4xl': '0 45px 70px -10px rgba(0, 0, 0, 0.5)',
-      }
+      },
+      backgroundImage: {
+        'iwtexture': "url('/Background/background.jpg')",
+        'footer': "url('/images/waves.png')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
+      },
     },
     screens: {
       sm: '640px',
@@ -131,6 +137,11 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      marquee: 'marquee 15s linear infinite',
+      marquee2: 'marquee2 15s linear infinite',
+      marquee3: 'marquee3 15s linear infinite',
+      marquee4: 'marquee4 15s linear infinite',
+      text: 'text 5s ease infinite',
     },
     aria: {
       checked: 'checked="true"',
@@ -557,6 +568,16 @@ module.exports = {
       full: '100%',
     }),
     keyframes: {
+      text: {
+        '0%, 100%': {
+          'background-size': '200% 200%',
+          'background-position': 'left center',
+        },
+        '50%': {
+          'background-size': '200% 200%',
+          'background-position': 'right center',
+        },
+      },
       spin: {
         to: {
           transform: 'rotate(360deg)',
@@ -582,6 +603,22 @@ module.exports = {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
         },
+      },
+      marquee: {
+        '0%': { transform: 'translateX(0%)' },
+        '100%': { transform: 'translateX(-100%)' },
+      },
+      marquee2: {
+        '0%': { transform: 'translateX(100%)' },
+        '100%': { transform: 'translateX(0%)' },
+      },
+      marquee3: {
+        '0%': { transform: 'translateX(200%)' },
+        '100%': { transform: 'translateX(100%)' },
+      },
+      marquee4: {
+        '0%': { transform: 'translateX(300%)' },
+        '100%': { transform: 'translateX(200%)' },
       },
     },
     letterSpacing: {

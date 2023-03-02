@@ -1,13 +1,22 @@
 'use client';
-
+import { useOnClickOutside } from 'usehooks-ts'
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
 import Image from "next/image";
+import React, { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 
-export default function MyNavbar({signOut}) {
-  const ref = useRef();
+export default function MyNavbar({children}) {
+  const router = useRouter()
+  const Navref = useRef();
   const [navbar, setNavbar] = useState(false);
-  useOnClickOutside(ref, () => setNavbar(false));
+  const handleClickOutside = () => {
+    setNavbar(false)
+  }
+  const handleClickInside = () => {
+    setNavbar(!navbar)
+  }
+  
+  useOnClickOutside(Navref, handleClickOutside)
   return (
     <div>
       <nav className="bg-neutral-900 w-full fixed z-50 shadow-2xl px-5">
@@ -36,7 +45,7 @@ export default function MyNavbar({signOut}) {
               <div className="md:hidden">
                 <button
                   className="pr-2 mr-2 pl-2 text-white rounded-md outline-none focus:border-white focus:border"
-                  onClick={() => setNavbar(!navbar)}
+                  onClick={handleClickInside}
                 >
                   {navbar ? (
                     <svg
@@ -77,7 +86,7 @@ export default function MyNavbar({signOut}) {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul ref={ref} className="
+              <ul ref={Navref} className="
               md:lvl1 
               md:flex 
               ">
@@ -392,36 +401,11 @@ export default function MyNavbar({signOut}) {
                   <button className="a2im-border-wrap2 text-white font-bold rounded-sm px-2" onClick={signOut}>Sign out</button>
                 </li>
               </ul>
-            </div>
+            </div> 
+            {children}
           </div>
         </div>
       </nav>
     </div>
-  );
-}
-function useOnClickOutside(ref, handler) {
-  useEffect(
-    () => {
-      const listener = (event) => {
-        // Do nothing if clicking ref's element or descendent elements
-        if (!ref.current || ref.current.contains(event.target)) {
-          return;
-        }
-        handler(event);
-      };
-      document.addEventListener("mousedown", listener);
-      document.addEventListener("touchstart", listener);
-      return () => {
-        document.removeEventListener("mousedown", listener);
-        document.removeEventListener("touchstart", listener);
-      };
-    },
-    // Add ref and handler to effect dependencies
-    // It's worth noting that because passed in handler is a new ...
-    // ... function on every render that will cause this effect ...
-    // ... callback/cleanup to run every render. It's not a big deal ...
-    // ... but to optimize you can wrap handler in useCallback before ...
-    // ... passing it into this hook.
-    [ref, handler]
   );
 }

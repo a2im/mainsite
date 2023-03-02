@@ -3,7 +3,6 @@ import Image from "next/image";
 import { PostRelationResponseCollection } from "../../lib/gql/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 export default async function MyPost({params,}: { params: { 
   slug : String,
  }}) {
@@ -11,7 +10,15 @@ export default async function MyPost({params,}: { params: {
 const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${params.slug}`, { next: { revalidate: 60 }});
 const posts: PostRelationResponseCollection = await res.json()
 
-  return <div className=" dark:bg-neutral-600 pb-20">
+  return (
+  <>
+  <div className=" dark:bg-neutral-600 pb-20">
+  <title>A2IM - {params.slug}</title>
+  <meta
+          name="description"
+          content="Founded by independents, for independents, A2IM."
+          key="desc"
+        />
     <div className="max-w-5xl mx-auto text-4xl ">
 <Link href={"/news"}>
     <FontAwesomeIcon icon="arrow-left" className="ml-10 hover:scale-105 pb-5"/>
@@ -43,4 +50,6 @@ const posts: PostRelationResponseCollection = await res.json()
   )}
         </div>
     </div>
+    </>
+  )
 }
