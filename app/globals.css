@@ -1,5 +1,61 @@
 @tailwind base;
 
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
+
+.strike {
+  position: relative;
+}
+.strike::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background: #ff1827;
+  animation-name: strike;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+
+.bottext pre { 
+  white-space: pre-wrap;
+  list-style: none;
+  padding-left: 0;
+  padding: 0;
+}
+
+.bottext code { 
+  white-space: pre-wrap;
+  list-style: none;
+  padding-left: 0;
+  padding: 0;
+}
+
+.bottext ol { 
+  list-style: none;
+  padding-left: 0;
+  padding: 0;
+}
+
+.bottext li { 
+  margin-top: 1em;
+  margin-bottom:1em;
+  font-weight: 100;
+}
+
+.bottext p { 
+line-height: normal
+}
+.bottext a { 
+  color: var(--a2imblue);
+  }
+
 .a2im-border-wrap1 {
   max-width: 250px;
   padding: 1rem;

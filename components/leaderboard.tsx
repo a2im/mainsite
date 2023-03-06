@@ -31,7 +31,7 @@ export function HomeLeaderboard(){
         </div>
         <div
           className="px-8 md:px-20 mx-auto">
-              <h3 className="text-2xl grow align-middle max-w-2xl">
+              <h3 className="text-2xl grow align-middle max-w-2xl dark:text-white">
               THE COLLECTIVE VOICE OF INDEPENDENT MUSIC</h3>
         </div>
   </div>

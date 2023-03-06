@@ -3,7 +3,7 @@ import { RecentJobs, RecentNews } from "../app/recents"
 
 export default function Sidebar(){
     return (
-        <div className="flex flex-col gap-5 invisible md:visible md:w-1/3 md:h-full relative items-center bg-transparent">
+        <div className="md:flex flex-col gap-5 hidden md:w-1/3 md:h-full relative items-center bg-transparent">
             <Image src="/images/ads/ads_A2IM_Fat Skyscraper_240x400.png" 
               height={400}
               width={240}

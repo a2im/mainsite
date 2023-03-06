@@ -1,9 +1,27 @@
 import SocialFollow from "../../components/social-follow"
 
+export const metadata = {
+  title: 'A2IM - Program',
+  description: 'A2IM - Program Founded by independents, for independents, A2IM.',
+  openGraph: {
+    title: 'A2IM - Program',
+    url: 'https://a2im.org',
+    images: [
+      {
+        url: '/logos/A2IM-logos/A2IM-logo.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+  },
+  robots: {
+    index: true,
+  }
+}
+
 export default function Program() {
   return (
     <div>
-          <title>A2IM - Program</title>
           <div className="grow shrink content-center">
 <h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
 Program

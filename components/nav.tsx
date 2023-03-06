@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function MyNavbar({children}) {
   const router = useRouter()
-  const Navref = useRef();
+  const Navref = useRef(null);
   const [navbar, setNavbar] = useState(false);
   const handleClickOutside = () => {
     setNavbar(false)
@@ -80,12 +80,8 @@ export default function MyNavbar({children}) {
               </div>
             </div>
           </div>
-          <div>
-            <div
-              className={`flex-1 justify-center md:block ${
-                navbar ? 'block' : 'hidden'
-              }`}
-            >
+          <div className="flex flex-col md:flex-row">
+            <div className={`flex-1 justify-center md:block ${navbar ? 'block overflow-auto' : 'hidden'}`}>
               <ul ref={Navref} className="
               md:lvl1 
               md:flex 
