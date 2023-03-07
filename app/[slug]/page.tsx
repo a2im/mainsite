@@ -1,24 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PostRelationResponseCollection } from "../../lib/gql/types";
+import { PostRelationResponseCollection, PostEntityResponseCollection } from "../../lib/gql/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export async function generateMetadata({ params, searchParams }) {
+  const posts = await getPosts(params.slug)
+  return { 
+    title: posts.attributes?.Title,
+    description: 'Founded by independents, for independents, A2IM.',
+      openGraph: {
+        title: `A2IM - ${posts?.attributes?.Title}`,
+        url: 'https://a2im.org',
+        images: [
+          {
+            url: '/logos/A2IM-logos/A2IM-logo.png',
+            width: 800,
+            height: 600,
+          },
+        ],
+  },
+  robots: {
+    index: true,
+  } };
+}
+
+async function getPosts(slug) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${slug}`, { next: { revalidate: 60 }});
+  return res.json();
+}
 
 export default async function MyPost({params,}: { params: { 
   slug : String,
  }}) {
-
-const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${params.slug}`, { next: { revalidate: 60 }});
-const posts: PostRelationResponseCollection = await res.json()
-
+const posts: PostRelationResponseCollection = await getPosts(params.slug)
   return (
   <>
   <div className=" dark:bg-neutral-600 pb-20">
-  <title>A2IM - {params.slug}</title>
-  <meta
-          name="description"
-          content="Founded by independents, for independents, A2IM."
-          key="desc"
-        />
     <div className="max-w-5xl mx-auto text-4xl ">
 <Link href={"/news"}>
     <FontAwesomeIcon icon="arrow-left" className="ml-10 hover:scale-105 pb-5"/>

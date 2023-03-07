@@ -7,9 +7,11 @@ import ScrollNav from '@/components/scroll-nav';
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
+  title: 'A2IM - Home',
   description: 'Founded by independents, for independents, A2IM.',
   openGraph: {
     title: 'A2IM - Home',
+    description: 'Founded by independents, for independents, A2IM.',
     url: 'https://a2im.org',
     images: [
       {
@@ -25,12 +27,11 @@ export const metadata = {
 }
 
 export default async function Home() {
-  
     return (
       <>
     <div className="relative">
             <div className="mx-auto flex flex-row gap-5">
-            <ScrollNav/>
+            <ScrollNav MyTitle={metadata.title}/>
             <div>
           <Intro/>
           <Suspense fallback={<Loading start={0} end={10}/>}>

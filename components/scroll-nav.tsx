@@ -1,9 +1,9 @@
 'use client';
-export default function ScrollNav(){ 
+
+export default function ScrollNav({MyTitle}){ 
   const data = [1,2,3,4,5,6,7,8,9,10]
   const loadingdata = data.slice(1,5)
-  const MyTitle = document.title.toString();
-    return(
+  return (
       <>
 <nav className="navigation max-w-xs pt-5 side-bar md:sticky mb-auto md:top-16 bg-neutral-100 dark:bg-neutral-800  rounded-xl border-2 border-black ml-5 dark:border-white">
     <ul className="list-inside p-2 marker:text-black items-center content-center">
@@ -20,4 +20,5 @@ export default function ScrollNav(){
             </ul>
         </nav>
       </>
-    )}
+   )
+  }
